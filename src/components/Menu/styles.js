@@ -10,8 +10,9 @@ export const Container = styled.div`
 `;
 export const Logotipo = styled.button`
     border: none;
-    background-color: none;
-    
+    border-bottom: 2px solid ${({theme})=> theme.COLORS.BACKGROUND_900};
+    background-color: transparent;
+    color: ${({theme})=> theme.COLORS.BLUE_500};
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -22,9 +23,16 @@ export const Options = styled.ul`
     place-self: center;
     
     display: grid;
+    gap: 24px;
     font-style: normal;
-    font-weight: 400;
+    justify-items: center;
+    color: ${({theme}) => theme.COLORS.GRAY_300};
+
+    font-style: normal;
+    font-weight: 500;
     font-size: 16px;
     line-height: 21px;
+
+    margin-bottom: 200px;
 
 `;

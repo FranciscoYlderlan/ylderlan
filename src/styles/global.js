@@ -15,4 +15,7 @@ export default createGlobalStyle`
     button, a, input{
         font-family: 'Poppins', sans-serif;
     }
+    button, a, li {
+        cursor: pointer;
+    }
 `;
