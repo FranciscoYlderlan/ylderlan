@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import logo1 from "../../assets/logo.svg";
 
 export const Container = styled.div` 
+    grid-area: 'menu';
     display: grid;
     grid-template-rows: 105px auto;
     width: 250px;
@@ -8,17 +10,20 @@ export const Container = styled.div`
     background-color: ${({theme})=> theme.COLORS.BACKGROUND_700};
 
 `;
-export const Logotipo = styled.button`
-    border: none;
+export const Logotipo = styled.div`
     border-bottom: 2px solid ${({theme})=> theme.COLORS.BACKGROUND_900};
     background-color: transparent;
-    color: ${({theme})=> theme.COLORS.BLUE_500};
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
+    padding: 0 10px;
 
 `;
+export const Logo = styled.button`
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: url(${logo1}) no-repeat center center;
+    background-size:contain;
+`;
+
 export const Options = styled.ul`
     place-self: center;
     

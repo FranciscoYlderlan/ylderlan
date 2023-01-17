@@ -1,10 +1,10 @@
-import { Container, Logotipo ,Options } from "./styles";
+import { Container, Logotipo, Logo ,Options } from "./styles";
 
 export function Menu(){
     return (
         <Container>
             <Logotipo>
-                franciscoYlderlan
+                <Logo/>
             </Logotipo>
             <Options>
                 <li>home</li>
