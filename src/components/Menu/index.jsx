@@ -1,10 +1,12 @@
-import { Container, Logotipo, Logo ,Options } from "./styles";
+import { Container, Logotipo ,Options } from "./styles";
+
+import LogoImage from "../../assets/logo.svg";
 
 export function Menu(){
     return (
         <Container>
             <Logotipo>
-                <Logo/>
+                <img src={LogoImage} alt="Logo Habits" />
             </Logotipo>
             <Options>
                 <li>home</li>
