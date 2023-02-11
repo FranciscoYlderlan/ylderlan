@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    grid-area: 'description';
+    
+    background-color: ${({theme})=> theme.COLORS.BACKGROUND_700};
     border: none;
-    border-radius: 40px 0 0 0px;
+    border-radius: 40px;
+
 `;

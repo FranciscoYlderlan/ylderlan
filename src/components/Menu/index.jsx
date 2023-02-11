@@ -7,6 +7,7 @@ export function Menu(){
         <Container>
             <Logotipo>
                 <img src={LogoImage} alt="Logo Habits" />
+                <p> Francisco Ylderlan</p>
             </Logotipo>
             <Options>
                 <li>home</li>

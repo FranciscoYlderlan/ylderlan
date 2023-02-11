@@ -1,27 +1,28 @@
 import styled from "styled-components";
 
 export const Container = styled.div` 
-    grid-area: 'menu';
     display: grid;
-    height: 100vh;
-    grid-template-rows: 300px auto;
-    
-    
+    grid-template-rows: 1fr 2fr;
+    width: 14vw;
     background-color: ${({theme})=> theme.COLORS.BACKGROUND_700};
+    
 
 `;
 export const Logotipo = styled.div`
     display: grid;
-
+    align-content: center;
+    justify-items: center;
+    height: fit-content;
     img{
-        width: 150px;
-        place-self: center;
+        width: 100%;
         object-fit: cover;
     }
-
-
-    border-bottom: 2px solid ${({theme})=> theme.COLORS.BACKGROUND_900};
-    background-color: transparent;
+    p{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background-color: ${({theme})=> theme.COLORS.GRAY_300};
+    }
 `;
  
 export const Options = styled.ul`
