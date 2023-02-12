@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div` 
     display: grid;
     grid-template-rows: 1fr 2fr;
-    width: 14vw;
+    width: 16vw;
     background-color: ${({theme})=> theme.COLORS.BACKGROUND_700};
+    
     
 
 `;

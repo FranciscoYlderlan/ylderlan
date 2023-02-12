@@ -7,8 +7,8 @@ export function Home() {
     return (
         <Container>
             <Menu/>
-            <Content/>
             <Description/>
+            <Content/>
         </Container>
     );
 }
