@@ -6,8 +6,6 @@ export const Container = styled.div`
     width: 16vw;
     background-color: ${({theme})=> theme.COLORS.BACKGROUND_700};
     
-    
-
 `;
 export const Logotipo = styled.div`
     display: grid;
