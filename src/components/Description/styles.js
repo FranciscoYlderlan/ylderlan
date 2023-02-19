@@ -6,8 +6,8 @@ export const Container = styled.div`
     background-color: white;//${({theme}) => theme.COLORS.DARK_YELLOW};
 
     /* position: relative; */
-    width: 30%;
-    height: 40vh;
+    width: 35%;
+    height: 45vh;
     margin: 100px 0px 0px 150px;
    
 
