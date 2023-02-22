@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     
-    border: solid 25px  white;//${({theme}) => theme.COLORS.DARK_YELLOW};
-    background-color: white;//${({theme}) => theme.COLORS.DARK_YELLOW};
+    /* border: solid 25px  white;//${({theme}) => theme.COLORS.DARK_YELLOW}; */
+    padding: 30px;
+    background-color: ${({theme}) => theme.COLORS.WHITE};//${({theme}) => theme.COLORS.DARK_YELLOW};
 
     /* position: relative; */
     width: 35%;
