@@ -20,9 +20,11 @@ export function Profile() {
                     </p>
                     <p>
                         No desenvolvimento de <strong>back-ends </strong> 
-                        utilizo a ferramenta de denvolvimento <strong>NodeJS</strong>. 
-                        Para manipulação do banco de dados geralmente uso 
-                        <strong> Knex</strong> como query builder.
+                        utilizo a ferramenta de denvolvimento <strong>NodeJS </strong>
+                        para instalação e gerenciamento de pacotes. 
+                        {/* Para manipulação do banco de dados geralmente uso
+                        <strong> Knex</strong> como query builder ou mesmo 
+                        <strong> Prisma</strong> como ORM. */}
                     </p>
                 </Description>
                 <Content title="Projetos Pessoais">

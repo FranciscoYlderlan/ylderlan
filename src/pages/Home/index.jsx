@@ -10,7 +10,9 @@ import {
     SiStyledcomponents, 
     SiTailwindcss, 
     SiTypescript,
-    SiJest 
+    SiJest,
+    SiPrisma,
+    SiFastify 
 } from 'react-icons/si';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiCss3 } from 'react-icons/di';
@@ -44,8 +46,8 @@ export function Home() {
                         <SiStyledcomponents size={100} {...{title: "Styled-Components"}}/>
                         <FaNodeJs size={100} {...{title: "NodeJs"}}/>
                         <SiTailwindcss size={100} {...{title: "Tailwindcss"}}/>
-                        
-                        
+                        <SiPrisma size={90} {...{title: "Prisma"}}/>
+                        <SiFastify size={100} {...{title: "Fastify"}}/>
                     </div>
                 </Content>
             </Main>
