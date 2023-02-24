@@ -12,23 +12,17 @@ export function Contact() {
         <Container>
             <Menu/>
             <Main>
-                <Description>
-                    <h2>Minhas redes sociais</h2>
+                <Description title="Minhas redes sociais">
                     <p>
                         No momento estou disponível para novos trabalhos
                         entre em contato comigo. Vamos marcar uma reunião!
                     </p>
                 </Description>
-                <Content>
+                <Content title="Fale comigo">
                     <form>
-                        <h2>Fale comigo</h2>
-                        <div className="col-2">
-                            <Input placeholder="Informe seu nome"/>
-                            <Input placeholder="Informe seu email"/>
-                        </div>
-                        <div className="wrapper-mensagem">
-                            <TextArea placeholder="Informe sua mensagem"/>
-                        </div>
+                        <Input placeholder="Informe seu nome"/>
+                        <Input placeholder="Informe seu email"/>
+                        <TextArea placeholder="Informe sua mensagem"/>
                     </form>
                 </Content>
             </Main>

@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    text-align: justify;
     
-    /* border: solid 25px  white;//${({theme}) => theme.COLORS.DARK_YELLOW}; */
-    padding: 30px;
-    background-color: ${({theme}) => theme.COLORS.WHITE};//${({theme}) => theme.COLORS.DARK_YELLOW};
+    display: grid;
+    gap: 25px;
+    align-content: start;
+    justify-items: start;  
 
-    /* position: relative; */
+    padding: 30px 85px 30px 30px;
+    background-color: ${({theme}) => theme.COLORS.WHITE};
+    color: ${({theme}) => theme.COLORS.BACKGROUND_700};
+    
     width: 35%;
     height: 45vh;
     margin: 100px 0px 0px 150px;

@@ -34,8 +34,9 @@ export const Options = styled.ul`
 
     font-style: normal;
     justify-items: center;
-    color: ${({theme}) => theme.COLORS.GRAY_300};
-
+    a {
+        color: ${({theme}) => theme.COLORS.GRAY_300};
+    }
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

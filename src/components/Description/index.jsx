@@ -1,9 +1,10 @@
 import { Container } from "./styles";
 
-export function Description({ children }) {
+export function Description({title, children }) {
     return (
         <Container>
-            {children}
+            <h2>{ title }</h2>
+            { children }
         </Container>
     );
 }
