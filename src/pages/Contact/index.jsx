@@ -7,7 +7,7 @@ import { Input } from "../../components/Input";
 import { TextArea } from "../../components/TextArea";
 import { Container } from "./styles";
 
-export function Contacts() {
+export function Contact() {
     return (
         <Container>
             <Menu/>

@@ -5,7 +5,12 @@ import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
 import { Container } from "./styles";
 import { AiFillHtml5 } from 'react-icons/ai';
-import { SiJavascript, SiStyledcomponents, SiTailwindcss } from 'react-icons/si';
+import { 
+    SiJavascript, 
+    SiStyledcomponents, 
+    SiTailwindcss, 
+    SiTypescript 
+} from 'react-icons/si';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiCss3 } from 'react-icons/di';
 
@@ -33,11 +38,13 @@ export function Home() {
                     <div>
                         <AiFillHtml5 size={110} {...{title: "Html5"}}/>
                         <SiJavascript size={90} {...{title: "Javascript"}}/>
+                        <SiTypescript size={90} {...{title: "Typescript"}}/>
                         <FaReact size={100} {...{title: "React"}}/>
                         <DiCss3 size={110} {...{title: "Css3"}}/>
                         <FaNodeJs size={100} {...{title: "NodeJs"}}/>
                         <SiStyledcomponents size={110} {...{title: "Styled-Components"}}/>
                         <SiTailwindcss size={100} {...{title: "Tailwindcss"}}/>
+                        
                     </div>
                 </Content>
             </Main>
