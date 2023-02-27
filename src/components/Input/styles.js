@@ -16,6 +16,7 @@ export const Container = styled.div`
     
     > input {
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
+        color: ${({theme}) => theme.COLORS.WHITE};
         border: none;
         padding: 20px 0;
         padding-right: 20px;

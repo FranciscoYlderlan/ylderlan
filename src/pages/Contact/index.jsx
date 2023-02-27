@@ -5,6 +5,9 @@ import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
 import { Input } from "../../components/Input";
 import { TextArea } from "../../components/TextArea";
+import { Button } from "../../components/Button";
+
+
 import { Container } from "./styles";
 
 export function Contact() {
@@ -23,6 +26,7 @@ export function Contact() {
                         <Input placeholder="Informe seu nome"/>
                         <Input placeholder="Informe seu email"/>
                         <TextArea placeholder="Informe sua mensagem"/>
+                        <Button title="Enviar"/>
                     </form>
                 </Content>
             </Main>

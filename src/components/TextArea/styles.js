@@ -5,6 +5,7 @@ export const Container = styled.textarea`
     width: 100%;
     outline: none;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
+    color: ${({theme}) => theme.COLORS.WHITE};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -12,4 +13,6 @@ export const Container = styled.textarea`
     border: none;
     border-radius: 10px;
     padding: 20px;
+
+    resize: none;
 `;

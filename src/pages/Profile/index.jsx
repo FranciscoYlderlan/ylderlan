@@ -15,7 +15,7 @@ export function Profile() {
                         Os projetos aqui demonstrados, em sua maioria, foram 
                         desenvolvidos utilizando linguagem<strong> Javascript</strong>. 
                         Em <strong>front-ends</strong>, também utilizo da biblioteca 
-                        <strong> React</strong>, além de <strong>API's</strong> dependendo 
+                        <strong> React</strong>, além de variadas <strong>API's</strong> dependendo 
                         do escopo do projeto.
                     </p>
                     <p>
