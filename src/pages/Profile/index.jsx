@@ -1,4 +1,6 @@
 
+import { Viewer } from "../../components/Viewer";
+import { Window } from "../../components/Window";
 import { Menu } from "../../components/Menu";
 import { Tag } from "../../components/Tag";
 import { Main } from "../../components/Main";
@@ -41,6 +43,12 @@ export function Profile() {
                         <Tag title='Páginas' isActive/>
                         <Tag title='Códigos'/>
                     </Tags>
+                    <Viewer>
+                        <Window/>
+                        <Window/>
+                        <Window/>
+                        <Window/>
+                    </Viewer>
                 </Content>
             </Main>
         </Container>

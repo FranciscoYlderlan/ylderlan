@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export function Viewer({ title, isActive }) {
+export function Viewer({children}) {
     return (
-        <Container isActive = {isActive}>
-            <strong>{title}</strong>
+        <Container>
+            {children}
         </Container>
     );
 }

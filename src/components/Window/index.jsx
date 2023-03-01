@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export function Window({ title, isActive, children, ...rest }) {
+export function Window({ isActive, href, description, ...rest }) {
     return (
-        <Container isActive = {isActive} {...rest}>
-             { children }
+        <Container {...rest}>
+             <img src={href} alt={description} />
         </Container>
     );
 }
