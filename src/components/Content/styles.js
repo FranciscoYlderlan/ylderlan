@@ -15,15 +15,6 @@ export const Container = styled.div`
     color: ${({theme}) => theme.COLORS.GRAY_300};
 
     padding: 30px;
-
-    > div {
-        margin-top: 20px;
-
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        align-items: center;
-        gap: 20px;
-    }
     
 `;
 

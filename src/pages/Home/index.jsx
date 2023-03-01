@@ -3,7 +3,7 @@ import { Menu } from "../../components/Menu";
 import { Main } from "../../components/Main";
 import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
-import { Container } from "./styles";
+import { Container, Tools } from "./styles";
 import { AiFillHtml5 } from 'react-icons/ai';
 import { 
     SiJavascript, 
@@ -36,7 +36,7 @@ export function Home() {
                         Segue algumas bibliotecas, frameworks, linguagens e ferramentas 
                         cuja as quais já tive contato e pude desenvolver alguma aplicação.
                     </p>
-                    <div>
+                    <Tools>
                         <AiFillHtml5 size={100} {...{title: "Html5"}}/>
                         <SiJavascript size={90} {...{title: "Javascript"}}/>
                         <DiCss3 size={100} {...{title: "Css3"}}/>
@@ -48,7 +48,7 @@ export function Home() {
                         <SiTailwindcss size={100} {...{title: "Tailwindcss"}}/>
                         <SiPrisma size={90} {...{title: "Prisma"}}/>
                         <SiFastify size={100} {...{title: "Fastify"}}/>
-                    </div>
+                    </Tools>
                 </Content>
             </Main>
         </Container>

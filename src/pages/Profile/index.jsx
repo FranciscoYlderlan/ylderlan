@@ -1,9 +1,10 @@
 
 import { Menu } from "../../components/Menu";
+import { Tag } from "../../components/Tag";
 import { Main } from "../../components/Main";
 import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
-import { Container } from "./styles";
+import { Container, Tags } from "./styles";
 
 export function Profile() {
     return (
@@ -33,6 +34,13 @@ export function Profile() {
                         desenvolvimento lançados no meu perfil 
                         do Github.
                     </p>
+                    <Tags>
+                        <Tag title='Todos'/>
+                        <Tag title='Novos'/>
+                        <Tag title='Antigos'/>
+                        <Tag title='Páginas' isActive/>
+                        <Tag title='Códigos'/>
+                    </Tags>
                 </Content>
             </Main>
         </Container>
