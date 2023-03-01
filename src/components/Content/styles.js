@@ -6,7 +6,7 @@ export const Container = styled.div`
     
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     position: absolute;
-    height: 60vh;
+    height: 70vh;
     width: 50%;
     left: 40%;
     bottom: 10%;
