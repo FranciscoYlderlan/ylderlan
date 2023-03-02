@@ -1,9 +1,25 @@
-import { Container } from "./styles";
+import { useState } from 'react';
+import { Container, ScreenShot, Description } from "./styles";
 
-export function Window({ isActive, href, description, ...rest }) {
+export function Window({src, desc, ...rest }) {
+    const [isShown, setIsShown] = useState(false);
     return (
         <Container {...rest}>
-             <img src={href} alt={description} />
+            <ScreenShot 
+                src={src} 
+                alt={desc} 
+                onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)}
+            />
+
+            {isShown && (
+                <Description
+                    onMouseEnter={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}
+                >
+                    {desc}
+                </Description>
+            )}
         </Container>
     );
 }
