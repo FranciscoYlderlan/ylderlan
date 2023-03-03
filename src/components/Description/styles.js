@@ -19,6 +19,6 @@ export const Container = styled.div`
 
     align-self: start;
     
-    box-shadow: 0px 2px 4px black;
+    box-shadow: 0px 2px 5px ${({theme}) => theme.COLORS.SHADOW};
    
 `;

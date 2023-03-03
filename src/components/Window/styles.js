@@ -21,20 +21,17 @@ export const ScreenShot = styled.img`
 
     filter: brightness(0.7);
 
-    &:hover { 
-        opacity: 0.4;
-        filter: saturate(1.1);
-    }
 `;
 
 
 export const Description = styled.div`
     position:absolute;
     text-align: justify;
-    margin: 10px;
+    padding: 12px;
+    height: 100%;
     top: 0;
     left: 0;
     z-index: 1;
     color: white;
- 
+    background-color: ${({theme}) => theme.COLORS.SHADOW};
 `;

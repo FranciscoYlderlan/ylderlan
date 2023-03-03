@@ -13,7 +13,7 @@ export const Container = styled.div`
     width: 50%;
     left: 40%;
     bottom: 10%;
-    box-shadow: 0px 2px 4px black;
+    box-shadow: 0px 2px 5px ${({theme}) => theme.COLORS.SHADOW};
 
     color: ${({theme}) => theme.COLORS.GRAY_300};
 
