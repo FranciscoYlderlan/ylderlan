@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
     width: 100%;
@@ -24,7 +24,7 @@ export const ScreenShot = styled.img`
 `;
 
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
     position:absolute;
     text-align: justify;
     padding: 12px;
