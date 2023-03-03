@@ -7,16 +7,23 @@ export const Container = styled.button`
     gap: 8px;
     
     width: 100%;
+    color: ${({theme}) => theme.COLORS.BACKGROUND_700};
+
     background-color: ${({theme}) => theme.COLORS.DARK_YELLOW};
     border: none;
     border-radius: 8px;
     padding: 16px 0;
-    color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     
+    transition: filter .3s;
     font-style: normal;    
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     line-height: 21px;
+    
+    &:hover{
+        filter: brightness(.9);
+    }
+    
     &:disabled {
         cursor:default;
         filter: brightness(.5);
