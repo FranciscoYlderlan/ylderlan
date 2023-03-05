@@ -8,9 +8,9 @@ export const Container = styled(motion.div)`
     display: grid;
     align-content: start;
     
+    position: absolute;
     
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};
-    position: absolute;
     height: 70vh;
     width: 50%;
     left: 40%;

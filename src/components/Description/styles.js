@@ -10,13 +10,17 @@ export const Container = styled(motion.div)`
     align-content: start;
     justify-items: start;  
 
+    position: absolute;
+
     padding: 30px 85px 30px 30px;
     background-color: ${({theme}) => theme.COLORS.WHITE};
     color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     
     width: 35%;
     height: 45vh;
-    margin: 100px 0px 0px 150px;
+    left: 10%;
+    top: 10%;
+
    
 
     align-self: start;

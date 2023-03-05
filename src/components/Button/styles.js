@@ -21,11 +21,11 @@ export const Container = styled.button`
     line-height: 21px;
     
     &:hover{
-        filter: brightness(.9);
+        filter: brightness(.8);
     }
     
     &:disabled {
         cursor:default;
-        filter: brightness(.5);
+        filter: brightness(.3);
     }
 `;
