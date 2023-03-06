@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle  from './styles/global.js';
 import theme from './styles/theme.js';
-import { Home } from './pages/Home';
 import { Routes } from './routes/index.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

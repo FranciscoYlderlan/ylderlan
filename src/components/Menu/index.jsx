@@ -1,7 +1,6 @@
 import { Container, Logotipo ,Options } from "./styles";
 import LogoImage from "../../assets/logo.svg";
-
-import { Link } from 'react-router-dom';
+import { TextLink } from "../TextLink";
 
 export function Menu(){
     return (
@@ -11,9 +10,9 @@ export function Menu(){
                 <p>Francisco Ylderlan</p>
             </Logotipo>
             <Options>
-                <li><Link to="/">home</Link></li>
-                <li><Link to="/profile">profile</Link></li>
-                <li><Link to="/contact">contactMe</Link></li>
+                <li><TextLink title="home" to="/"/></li>
+                <li><TextLink title="profile" to="/profile"/></li>
+                <li><TextLink title="contactMe" to="/contact"/></li>
             </Options>
         </Container>
     );
