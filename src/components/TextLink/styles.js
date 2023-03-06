@@ -8,13 +8,15 @@ export const Container = styled(Link)`
     gap: 8px;
     background-color: transparent;
     border: none;
+    justify-content: center;
     align-items: center;
 
+    width: 100%;
 
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 44px;
     
     &::after{
         position: absolute;        
@@ -26,14 +28,16 @@ export const Container = styled(Link)`
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
-        line-height: 21px;
+        line-height: 44px;
 
         background: ${({theme}) => theme.COLORS.DARK_YELLOW};
         width: 0;
         
         bottom: 0%;
         height: 100%;
-        transition: width .3s;   
+        
+        transition: width .4s ease-in-out;
+
         z-index: 2;
     }
 

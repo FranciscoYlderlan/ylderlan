@@ -19,6 +19,8 @@ export const Logotipo = styled.div`
     p{
         width: 100%;
         text-align: center;
+        font-weight: 500;
+
         padding: 10px;
         background-color: ${({theme})=> theme.COLORS.GRAY_300};
     }
@@ -28,14 +30,20 @@ export const Options = styled.ul`
     margin-top: 100px;
 
     display: grid;
-    gap: 24px;
+
+    width: 100%;
 
     height: fit-content;
 
     font-style: normal;
     justify-items: center;
+    
     a {
         color: ${({theme}) => theme.COLORS.GRAY_300};
+    }
+    
+    li {
+        width: 100%;
     }
     font-style: normal;
     font-weight: 500;
