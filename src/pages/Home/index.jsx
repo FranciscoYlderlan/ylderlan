@@ -3,6 +3,7 @@ import { Menu } from "../../components/Menu";
 import { Main } from "../../components/Main";
 import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
+import { IconLink } from "../../components/IconLink";
 import { Container, Tools } from "./styles";
 import { AiFillHtml5 } from 'react-icons/ai';
 import { 
@@ -37,17 +38,39 @@ export function Home() {
                         cuja as quais já tive contato e pude desenvolver alguma aplicação.
                     </p>
                     <Tools>
-                        <AiFillHtml5 size={100} {...{title: "Html5"}}/>
-                        <SiJavascript size={90} {...{title: "Javascript"}}/>
-                        <DiCss3 size={100} {...{title: "Css3"}}/>
-                        <SiTypescript size={90} {...{title: "Typescript"}}/>
-                        <FaReact size={100} {...{title: "React"}}/>
-                        <SiJest size={90} {...{title: "Jest"}}/>
-                        <SiStyledcomponents size={100} {...{title: "Styled-Components"}}/>
-                        <FaNodeJs size={100} {...{title: "NodeJs"}}/>
-                        <SiTailwindcss size={100} {...{title: "Tailwindcss"}}/>
-                        <SiPrisma size={90} {...{title: "Prisma"}}/>
-                        <SiFastify size={100} {...{title: "Fastify"}}/>
+                        <IconLink size={100} title="Html5" icon={AiFillHtml5}
+                            href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
+                        />
+                        <IconLink size={90} title="Javascript" icon={SiJavascript}
+                            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
+                        />
+                        <IconLink size={100} title="CSS" icon={DiCss3}
+                            href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
+                        />
+                        <IconLink size={90} title="Typescript" icon={SiTypescript}
+                            href="https://www.typescriptlang.org/"
+                        />
+                        <IconLink size={100} title="React" icon={FaReact}
+                            href="https://pt-br.reactjs.org/"
+                        />
+                        <IconLink size={90} title="Jest" icon={SiJest}
+                            href="https://jestjs.io/pt-BR/"
+                        />
+                        <IconLink size={100} title="Styled-Components" icon={SiStyledcomponents}
+                            href="https://styled-components.com/"
+                        />
+                        <IconLink size={100} title="NodeJs" icon={FaNodeJs}
+                            href="https://nodejs.org/en/"
+                        />
+                        <IconLink size={100} title="Tailwindcss" icon={SiTailwindcss}
+                            href="https://tailwindcss.com/"
+                        />
+                        <IconLink size={90} title="Prisma" icon={SiPrisma}
+                            href="https://www.prisma.io/"
+                        />
+                        <IconLink size={100} title="Fastify" icon={SiFastify}
+                            href="https://www.fastify.io/"
+                        />
                     </Tools>
                 </Content>
             </Main>
