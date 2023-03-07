@@ -6,6 +6,7 @@ export const Container = styled(motion.div)`
     text-align: justify;
     
     display: grid;
+    gap: 8px;
     align-content: start;
     
     position: absolute;

@@ -6,7 +6,8 @@ import { Content } from "../../components/Content";
 import { Input } from "../../components/Input";
 import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
-
+import { MdOutlineEmail } from "react-icons/md"; 
+import { BsFillPersonFill } from "react-icons/bs"
 
 import { Container } from "./styles";
 
@@ -23,9 +24,19 @@ export function Contact() {
                 </Description>
                 <Content title="Fale comigo">
                     <form>
-                        <Input placeholder="Informe seu nome"/>
-                        <Input placeholder="Informe seu email"/>
-                        <TextArea placeholder="Informe sua mensagem"/>
+                        <Input 
+                            type="email" 
+                            placeholder="Informe seu email" 
+                            icon={MdOutlineEmail} 
+                            required
+                        />
+                        <Input 
+                            type="text" 
+                            placeholder="Informe seu nome" 
+                            icon={BsFillPersonFill} 
+                            required
+                        />
+                        <TextArea placeholder="Informe sua mensagem" required/>
                         <Button title="Enviar"/>
                     </form>
                 </Content>
