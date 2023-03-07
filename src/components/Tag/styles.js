@@ -9,7 +9,7 @@ export const Container = styled.span`
     border-radius: 7px;
     color: ${({theme, isActive}) => isActive ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE};
     background-color: ${({theme, isActive}) => isActive ? theme.COLORS.WHITE : theme.COLORS.BACKGROUND_700};
-    transition: all .3s;
+    transition: all .4s;
 
 
 

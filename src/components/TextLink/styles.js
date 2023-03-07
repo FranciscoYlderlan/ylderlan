@@ -7,8 +7,8 @@ export const Container = styled(Link)`
     display: flex;
     gap: 8px;
     
-    color: ${({theme, isActive}) => isActive ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE} !important;
-    background: ${({theme, isActive}) => isActive ? theme.COLORS.DARK_YELLOW : theme.COLORS.BACKGROUND_700};
+    color: ${({theme, active}) => active ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE} !important;
+    background: ${({theme, active}) => active ? theme.COLORS.DARK_YELLOW : theme.COLORS.BACKGROUND_700};
     
     border: none;
     justify-content: center;
@@ -17,7 +17,7 @@ export const Container = styled(Link)`
     width: 100%;
 
     font-style: normal;
-    font-weight: ${({isActive}) => isActive ? 700 : 500};
+    font-weight: ${({active}) => active ? 700 : 500};
     font-size: 16px;
     line-height: 44px;
     

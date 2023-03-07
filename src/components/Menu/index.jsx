@@ -10,7 +10,7 @@ export function Menu(){
                 <p>Francisco Ylderlan</p>
             </Logotipo>
             <Options>
-                <li><TextLink isActive title="home" to="/"/></li>
+                <li><TextLink title="home" to="/" active/></li>
                 <li><TextLink title="profile" to="/profile"/></li>
                 <li><TextLink title="contactMe" to="/contact"/></li>
             </Options>
