@@ -9,8 +9,12 @@ export const Container = styled.div`
 
 
 export const Tags = styled.div`
+    
     display: flex;
     gap: 20px;
-    margin-top: 20px;
-
+    height: 60px;
+    
+    align-items: flex-end;
+    
+    
 `;

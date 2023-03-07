@@ -6,7 +6,10 @@ export const Container = styled(Link)`
     
     display: flex;
     gap: 8px;
-    background-color: transparent;
+    
+    color: ${({theme, isActive}) => isActive ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE} !important;
+    background: ${({theme, isActive}) => isActive ? theme.COLORS.DARK_YELLOW : theme.COLORS.BACKGROUND_700};
+    
     border: none;
     justify-content: center;
     align-items: center;
@@ -14,14 +17,16 @@ export const Container = styled(Link)`
     width: 100%;
 
     font-style: normal;
-    font-weight: 500;
+    font-weight: ${({isActive}) => isActive ? 700 : 500};
     font-size: 16px;
     line-height: 44px;
     
     &::after{
         position: absolute;        
         content:  '${({title}) => title }';
+        
         overflow: hidden;
+        
         color: ${({theme}) => theme.COLORS.BACKGROUND_700};
 
         text-align: center;
