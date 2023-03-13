@@ -41,7 +41,7 @@ export const Container = styled(Link)`
         bottom: 0%;
         height: 100%;
         
-        transition: width .4s ease-in-out;
+        ${({active}) => active ? "transform: width;" : "transition: width .4s ease-in-out;"}
 
         z-index: 2;
     }

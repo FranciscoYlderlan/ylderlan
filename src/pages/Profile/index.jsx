@@ -1,20 +1,20 @@
 
 import { Viewer } from "../../components/Viewer";
-import { Window } from "../../components/Window";
+
 import { Menu } from "../../components/Menu";
 import { Tag } from "../../components/Tag";
 import { Main } from "../../components/Main";
 import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
-import img1 from "../../assets/stage-5-IMC.png";
-import img2 from "../../assets/stage-6-git-favorites.png";
-import img3 from "../../assets/stage-6-spa-universe.png";
-import img4 from "../../assets/stage5-jogo-da-adivinhacao.png";
+
+
+import { useEffect } from "react";
 
 import { Container, Tags } from "./styles";
 
 
 export function Profile() {
+    
     return (
         <Container>
             <Menu/>
@@ -49,15 +49,9 @@ export function Profile() {
                         <Tag title='Páginas' isActive/>
                         <Tag title='Códigos'/>
                     </Tags>
-                    <Viewer>
-                        <Window src={img1} desc="Descrição pra cacete 
-                        Descrição pra cacete Descrição pra cacete Descrição pra cacete Descrição pra cacete
-                        Descrição pra cacete Descrição pra cacete Descrição pra cacete Descrição pra cacete"/>
-                        <Window src={img2}/>
-                        <Window src={img3}/>
-                        <Window src={img4}/>
-                        <Window src={img1}/>
-                    </Viewer>
+                    <Viewer/>
+
+                    
                 </Content>
             </Main>
         </Container>
