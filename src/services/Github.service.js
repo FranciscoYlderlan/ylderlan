@@ -1,8 +1,10 @@
+import * as utils from "../providers/utils.js"
 
 export class GithubRepos {
     
-    static async searchRepos(username) {
-        const endpoint = `https://api.github.com/users/${username}/repos`
+
+    static async searchRepos() {
+        const endpoint = `https://api.github.com/users/franciscoylderlan/repos`
         const result = await fetch(endpoint);
         const repos_infos = await result.json();
         let formatted_repos_infos = []; 
@@ -19,6 +21,24 @@ export class GithubRepos {
         ));
         return formatted_repos_infos;
     }
+
+    static async filterRepos(option = "all"){
+        
+        let aux = await GithubRepos.searchRepos();
+
+        if(option == "code")
+            return aux.filter(repos => !repos.has_pages);
+        if(option == "page")
+            return aux.filter(repos => repos.has_pages);
+        if(option == "old")
+            return aux.sort((repos1, repos2) => 
+            utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at), "decre"));
+        if(option == "new")
+            return aux.sort((repos1, repos2) => 
+            utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at)));
+        return aux;    
+    }
+
     static getPageURL(repository){
         const {name, html_url, homepage, has_pages} = repository;     
         if(has_pages){
@@ -26,7 +46,7 @@ export class GithubRepos {
             
             if(existHomePage) return homepage.includes("https://")? homepage :`https://${homepage}/`; 
             
-            return `https://${username}.github.io/${name}/`;
+            return `https://franciscoylderlan.github.io/${name}/`;
         }
         return html_url;
     }

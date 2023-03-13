@@ -8,13 +8,15 @@ import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
 
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { Container, Tags } from "./styles";
 
 
 export function Profile() {
     
+    const [option, setOption] = useState('all');
+
     return (
         <Container>
             <Menu/>
@@ -43,13 +45,33 @@ export function Profile() {
                         do Github.
                     </p>
                     <Tags>
-                        <Tag title='Todos'/>
-                        <Tag title='Novos'/>
-                        <Tag title='Antigos'/>
-                        <Tag title='Páginas' isActive/>
-                        <Tag title='Códigos'/>
+                        <Tag 
+                            isActive={option == 'all'}
+                            title='Todos' 
+                            onClick={() => setOption('all')}
+                        />
+                        <Tag 
+                            isActive={option == 'new'}
+                            title='Novos'
+                            onClick={() => setOption('new')}
+                        />
+                        <Tag 
+                            isActive={option == 'old'}
+                            title='Antigos'
+                            onClick={() => setOption('old')}
+                        />
+                        <Tag 
+                            isActive={option == 'page'}
+                            title='Páginas' 
+                            onClick={() => setOption('page')}
+                        />
+                        <Tag 
+                            isActive={option == 'code'}
+                            title='Códigos' 
+                            onClick={() => setOption('code')}
+                        />
                     </Tags>
-                    <Viewer/>
+                    <Viewer filter={option}/>
 
                     
                 </Content>

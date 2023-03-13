@@ -20,8 +20,13 @@ export const View = styled.div`
     display: grid;
     place-content: center;
 
+    font-style: normal;    
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+
     background-color: ${({theme,uploaded}) => uploaded? theme.COLORS.GREEN : theme.COLORS.DARK_YELLOW};
-    color: ${({theme,uploaded}) => uploaded? theme.COLORS.WHITE : theme.COLORS.BACKGROUND_700};
+    color: ${({theme,uploaded}) => uploaded? theme.COLORS.WHITE : "black"};
 
 
 `;
