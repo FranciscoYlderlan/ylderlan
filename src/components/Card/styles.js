@@ -12,14 +12,17 @@ export const Container = styled.div`
     }
 `;
 
-export const ScreenShot = styled.img`
+export const View = styled.div`
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 4px;
-    transition: all 200ms ease-out; 
 
-    filter: brightness(0.7);
+    display: grid;
+    place-content: center;
+
+    background-color: ${({theme,uploaded}) => uploaded? theme.COLORS.GREEN : theme.COLORS.DARK_YELLOW};
+    color: ${({theme,uploaded}) => uploaded? theme.COLORS.WHITE : theme.COLORS.BACKGROUND_700};
+
 
 `;
 

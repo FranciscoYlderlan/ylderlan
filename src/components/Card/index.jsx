@@ -1,18 +1,24 @@
 import { useState } from 'react';
-import { Container, ScreenShot, Description } from "./styles";
+import { Container, View, Description } from "./styles";
 
-export function Window({src, desc, ...rest }) {
+export function Card({src, uploaded=false ,desc, ...rest }) {
     const [isShown, setIsShown] = useState(false);
     
     return (
         <Container {...rest}>
-            <ScreenShot 
-                src={src} 
-                alt={desc} 
+        
+            <View
+                uploaded = {uploaded}
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}
-            />
-
+            >
+                { uploaded 
+                    ? 
+                    <h2>Web</h2>
+                    :
+                    <h2>Code</h2>
+                }   
+            </View>
             {isShown && (
                 <Description
                     animate={{opacity: 1}}

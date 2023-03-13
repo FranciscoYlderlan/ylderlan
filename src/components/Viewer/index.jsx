@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import { Window } from "../../components/Window";
+import { Card } from "../../components/Card";
 import img1 from "../../assets/stage-5-IMC.png";
 
 import { GithubRepos } from "../../services/Github.service"
@@ -28,19 +28,16 @@ export function Viewer({filter,...rest}) {
         }
         
     },[])
+    
     return (
         <Container {...rest}>
-            {projects.length > 0 
-            ?
-                projects.map((project) =>{
-                       return(
-                        <Window key={project.name} src={img1} desc={project.description}/>
+            {
+                projects && projects.map((project) =>{
+                    return(
+                        <Card key={project.name} src={img1} desc={project.description}/>
                     ) 
                 })
-
-            :
-                <p>n carregou</p>
-            }
+            }   
         </Container>
     );
 }
