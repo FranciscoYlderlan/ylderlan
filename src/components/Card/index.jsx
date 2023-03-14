@@ -1,25 +1,25 @@
 import { useState } from 'react';
 import { Container, View, Description } from "./styles";
+import { CardHover } from '../CardHover';
 
-export function Card({src, uploaded=false ,desc, ...rest }) {
+export function Card({src, uploaded=false ,desc, tags, ...rest }) {
     const [isShown, setIsShown] = useState(false);
     
     return (
         <Container {...rest}>
         
-            <View
-                uploaded = {uploaded}
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
-            >
-                { uploaded 
-                    ? 
-                    <h2>Web</h2>
-                    :
-                    <h2>Code</h2>
-                }   
-            </View>
-            {isShown && (
+            <CardHover>
+                <View
+                    uploaded = {uploaded}
+                    onMouseEnter={() => setIsShown(true)}
+                    onMouseLeave={() => setIsShown(false)}
+                >
+                    {
+                        uploaded ? <h2>Web</h2> : <h2>Code</h2>
+                    }
+                </View>
+            </CardHover>
+            {/* {isShown && (
                 <Description
                     animate={{opacity: 1}}
                     transition={{
@@ -33,7 +33,7 @@ export function Card({src, uploaded=false ,desc, ...rest }) {
                 >
                     {desc}
                 </Description>
-            )}
+            )} */}
         </Container>
     );
 }
