@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import { 
-        HoverCardContent, 
-         Tags, 
+        HoverCardContent,
+        Container, 
+        Tags, 
          Description,
          ButtonLink
         } from "./styles";
@@ -12,19 +13,19 @@ import {
 export function CardHover({children, desc, tags, src,...rest }) {
     
     return (
-        <HoverCard.Root>
+        <HoverCard.Root className="Card">
         <HoverCard.Trigger asChild>
             {children}
         </HoverCard.Trigger>
         <HoverCard.Portal>
-        <HoverCard.Content collisionPadding={{ top: 60, left: 60 }}>
-            
-            <HoverCardContent>
+            <Container>
+                <HoverCard.Content className='CardContent'>
+                    <HoverCardContent>
 
-            </HoverCardContent>
+                    </HoverCardContent>
+                </HoverCard.Content>
+            </Container>
             
-            <HoverCard.Arrow className="HoverCardArrow" />
-        </HoverCard.Content>
         </HoverCard.Portal>
     </HoverCard.Root>
     );
