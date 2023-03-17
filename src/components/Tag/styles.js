@@ -15,8 +15,8 @@ export const Container = styled.span`
 
     &:hover{
         cursor: pointer;
-        background-color: ${({theme}) => theme.COLORS.WHITE};
+        background-color: ${({theme}) => theme.COLORS.GRAY_300};
         color: ${({theme}) => theme.COLORS.BACKGROUND_700};
-        margin-bottom: ${({isActive}) => isActive ? '0px' : '7px'};
+        margin-bottom: ${({isActive}) => isActive ? '0px' : '-7px'};
     }
 `;

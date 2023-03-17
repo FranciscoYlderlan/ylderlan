@@ -42,7 +42,11 @@ function sorted(value1, value2,type="incre"){
 
 function tagsTitleGenerator(description){
     let tags = [];
-    dictThemes.map(theme => description.toLowerCase().includes(theme) ? tags = [...tags, theme] : false);
+    
+    dictThemes.map(theme => 
+        description.toLowerCase().includes(theme) ? tags = [...tags, theme] : false
+    );
+    
     return tags
 }
 

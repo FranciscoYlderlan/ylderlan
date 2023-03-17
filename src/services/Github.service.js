@@ -22,21 +22,28 @@ export class GithubRepos {
         return formatted_repos_infos;
     }
 
-    static async filterRepos(option = "all"){
+    static async filterRepos(option = ["all"]){
         
         let aux = await GithubRepos.searchRepos();
 
-        if(option == "code")
-            return aux.filter(repos => !repos.has_pages);
-        if(option == "page")
-            return aux.filter(repos => repos.has_pages);
-        if(option == "old")
-            return aux.sort((repos1, repos2) => 
-            utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at), "decre"));
-        if(option == "new")
-            return aux.sort((repos1, repos2) => 
+        if(option.includes("all")) return aux;  
+
+        if(option.includes("code"))
+            aux = aux.filter(repos => !repos.has_pages);
+        
+        if(option.includes("page"))
+            aux = aux.filter(repos => repos.has_pages);
+        
+        if(option.includes("new"))
+            aux = aux.sort((repos1, repos2) => 
             utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at)));
-        return aux;    
+        
+        if(option.includes("old"))
+            aux = aux.sort((repos1, repos2) => 
+            utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at), "decre"));
+        
+        return aux
+          
     }
 
     static getPageURL(repository){

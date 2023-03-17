@@ -15,7 +15,45 @@ import { Container, Tags } from "./styles";
 
 export function Profile() {
     
-    const [option, setOption] = useState('all');
+    const [option, setOption] = useState(['all']);
+
+    function handleSelectionOptions(selectedOption){
+
+        if(option.includes(selectedOption)){
+            setOption(prevState => prevState.filter( option => !option.includes(selectedOption)));
+        }else{
+            setOption(prevState => [...prevState, selectedOption]);
+        }
+
+        if(option.length == 1) {
+            setOption(prevState => prevState.filter(option => !option.includes('all')));
+        }
+
+        if(selectedOption == 'all') {
+            setOption(['all']);
+        }
+
+        if(selectedOption == 'page') {
+            setOption(prevState => prevState.filter( option => !option.includes('code')))
+        }
+
+        if(selectedOption == 'code') {
+            setOption(prevState => prevState.filter( option => !option.includes('page')))
+        }
+
+        if(selectedOption == 'new') {
+            setOption(prevState => prevState.filter( option => !option.includes('old')))
+        }
+
+        if(selectedOption == 'old') {
+            setOption(prevState => prevState.filter( option => !option.includes('new')))
+        }
+    }
+    useEffect(() => {
+        if(option.length == 0) {
+            setOption(['all']);
+        }
+    },[option])
 
     return (
         <Container>
@@ -46,29 +84,29 @@ export function Profile() {
                     </p>
                     <Tags>
                         <Tag 
-                            isActive={option == 'all'}
+                            isActive={option.includes('all')}
                             title='Todos' 
-                            onClick={() => setOption('all')}
+                            onClick={() => handleSelectionOptions('all')}
                         />
                         <Tag 
-                            isActive={option == 'new'}
+                            isActive={option.includes('new')}
                             title='Novos'
-                            onClick={() => setOption('new')}
+                            onClick={() => handleSelectionOptions('new')}
                         />
                         <Tag 
-                            isActive={option == 'old'}
+                            isActive={option.includes('old')}
                             title='Antigos'
-                            onClick={() => setOption('old')}
+                            onClick={() => handleSelectionOptions('old')}
                         />
                         <Tag 
-                            isActive={option == 'page'}
+                            isActive={option.includes('page')}
                             title='Páginas' 
-                            onClick={() => setOption('page')}
+                            onClick={() => handleSelectionOptions('page')}
                         />
                         <Tag 
-                            isActive={option == 'code'}
+                            isActive={option.includes('code')}
                             title='Códigos' 
-                            onClick={() => setOption('code')}
+                            onClick={() => handleSelectionOptions('code')}
                         />
                     </Tags>
                     <Viewer filter={option}/>

@@ -11,7 +11,6 @@ export function Menu(){
         localStorage.setItem('@ylderlan:optionSelected', e.target.title);
         setSelected(e.target.title);
     }
-    
 
     return (
         <Container>
