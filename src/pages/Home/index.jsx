@@ -19,6 +19,7 @@ import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiCss3 } from 'react-icons/di';
 
 export function Home() {
+
     return (
         <Container>
             <Menu/>

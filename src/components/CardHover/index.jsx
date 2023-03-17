@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import * as HoverCard from '@radix-ui/react-hover-card';
+import { Tag } from '../Tag';
 import { 
         HoverCardContent,
         Container, 
@@ -8,9 +9,12 @@ import {
          ButtonLink
         } from "./styles";
 
+import { tagsTitleGenerator } from '../../providers/utils'
 
 
-export function CardHover({children, desc, tags, src,...rest }) {
+export function CardHover({children, desc, src,...rest }) {
+    
+    const tagsTitles = tagsTitleGenerator(desc);
     
     return (
         <HoverCard.Root className="Card">
@@ -21,7 +25,16 @@ export function CardHover({children, desc, tags, src,...rest }) {
             <Container>
                 <HoverCard.Content className='CardContent'>
                     <HoverCardContent>
-
+                        <Tags>
+                            {
+                                tagsTitles &&
+                                tagsTitles.map(( tagTitle ) => {
+                                    return (
+                                        <Tag key={tagTitle} title={tagTitle} />
+                                    )
+                                })
+                            }
+                        </Tags>
                     </HoverCardContent>
                 </HoverCard.Content>
             </Container>

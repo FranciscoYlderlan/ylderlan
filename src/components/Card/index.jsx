@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Container, View, Description } from "./styles";
 import { CardHover } from '../CardHover';
 
-export function Card({src, uploaded=false ,desc, tags, ...rest }) {
+export function Card({src, uploaded=false ,desc, ...rest }) {
     const [isShown, setIsShown] = useState(false);
     
     return (
         <Container {...rest}>
         
-            <CardHover>
+            <CardHover desc={desc}>
                 <View
                     uploaded = {uploaded}
                     onMouseEnter={() => setIsShown(true)}
