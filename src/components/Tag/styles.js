@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
-export const Container = styled.span`
+import { motion } from "framer-motion";
+export const Container = styled(motion.span)`
     width: fit-content;
     height: fit-content;
     padding: 8px 14px;
-
-    border: 2.5px solid ${({theme, isActive}) => isActive ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE};
+    
+    border: 2.5px solid ${({theme, isActive}) => isActive ? 'none' : theme.COLORS.WHITE};
     border-radius: 7px;
     color: ${({theme, isActive}) => isActive ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE};
     background-color: ${({theme, isActive}) => isActive ? theme.COLORS.WHITE : theme.COLORS.BACKGROUND_700};

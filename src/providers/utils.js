@@ -15,6 +15,7 @@ const dictThemes = [
     'sqlite',
     'nodejs',
     '@media',
+    'prisma',
     'clamp',
     'axios',
     'react',
@@ -28,6 +29,7 @@ const dictThemes = [
     'es6',
     'api',
     'rem',
+    'sql',
 ];
 
 

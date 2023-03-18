@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import * as HoverCard from '@radix-ui/react-hover-card';
@@ -42,9 +43,20 @@ export function CardHover({children, project, src,...rest }) {
                         <Tags>
                             {
                                 tagsTitles &&
-                                tagsTitles.map(( tagTitle ) => {
+                                tagsTitles.map(( tagTitle, index ) => {
                                     return (
-                                        <Tag key={tagTitle} title={tagTitle} isActive/>
+                                        <Tag 
+                                            animate={{opacity: 1}}
+                                            transition={{
+                                                duration: .3,
+                                                delay: index * .2,
+                                                ease: [0.4, .5, .7, 1],
+                                            }}
+                                            initial={{ opacity: 0}}                 
+                                            key={tagTitle} 
+                                            title={tagTitle} 
+                                            isActive
+                                        />
                                     )
                                 })
                             }

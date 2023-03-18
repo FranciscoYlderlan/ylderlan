@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     width: 100%;
     height: 250px;
     position: relative;
@@ -12,14 +12,36 @@ export const Container = styled.div`
     }
 `;
 
+export const Tags = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 8px;
+    color: black;
+    font-style: normal;    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+`;
+
 export const View = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 4px;
 
     display: grid;
-    place-content: center;
+    gap: 14px;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    
 
+    >h2 {
+        align-self: flex-end;    
+    }
+    > ${Tags} {
+
+    }
     font-style: normal;    
     font-weight: 700;
     font-size: 24px;
@@ -32,14 +54,3 @@ export const View = styled.div`
 `;
 
 
-export const Description = styled(motion.div)`
-    position:absolute;
-    text-align: justify;
-    padding: 12px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    color: white;
-    background-color: ${({theme}) => theme.COLORS.SHADOW};
-`;

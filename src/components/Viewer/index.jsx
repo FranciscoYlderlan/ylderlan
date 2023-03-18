@@ -52,9 +52,16 @@ export function Viewer({filter=null,...rest}) {
     return (
         <Container {...rest}>
             {
-                projects && projects.map((project) =>{
+                projects && projects.map((project, index) =>{
                     return(
-                        <Card 
+                        <Card
+                            animate={{opacity: 1}}
+                            transition={{
+                                duration: .03,
+                                delay: index * .03,
+                                ease: [0.5, 0.71, 1, 1],
+                            }}
+                            initial={{ opacity: 0}} 
                             key={project.name} 
                             uploaded={project.has_pages} 
                             project={project}
