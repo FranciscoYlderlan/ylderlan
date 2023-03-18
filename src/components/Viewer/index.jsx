@@ -57,7 +57,7 @@ export function Viewer({filter=null,...rest}) {
                         <Card 
                             key={project.name} 
                             uploaded={project.has_pages} 
-                            desc={project.description}
+                            project={project}
                         />
                     ) 
                 })

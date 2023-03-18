@@ -1,26 +1,33 @@
 
 const dictThemes = [
     'styled-components',
+    'localStorage',
+    'mobile first',
     'tailwindcss',
     'typescript',
     'javascript',
-    'frontend',
     '@keyframes',
+    'frontend',
     'backend',
     'express',
     'fastify',
     'android',
+    'sqlite',
+    'nodejs',
     '@media',
     'clamp',
     'axios',
     'react',
     'knex',
     'html',
+    'grid',
+    'git',
     'css',
-    'ios',
     'dom',
     'spa',
-    'es6'
+    'es6',
+    'api',
+    'rem',
 ];
 
 
@@ -40,14 +47,22 @@ function sorted(value1, value2,type="incre"){
 }
 
 
-function tagsTitleGenerator(description){
+function tagsTitleGenerator({name,description}){
     let tags = [];
     
     dictThemes.map(theme => 
         description.toLowerCase().includes(theme) ? tags = [...tags, theme] : false
     );
+
+    dictThemes.map(theme => 
+        name.toLowerCase().includes(theme) ? tags = [...tags, theme] : false
+    );
     
-    return tags
+    const uniqueTags = tags.filter((element, index) => {
+        return tags.indexOf(element) === index;
+    });
+
+    return uniqueTags
 }
 
 export {

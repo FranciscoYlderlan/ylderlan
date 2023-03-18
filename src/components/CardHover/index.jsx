@@ -12,9 +12,12 @@ import {
 import { tagsTitleGenerator } from '../../providers/utils'
 
 
-export function CardHover({children, desc, src,...rest }) {
+export function CardHover({children, project, src,...rest }) {
     
-    const tagsTitles = tagsTitleGenerator(desc);
+    const tagsTitles = tagsTitleGenerator({
+        description: project.description,
+        name: project.name
+    });
     
     return (
         <HoverCard.Root className="Card">
@@ -25,12 +28,16 @@ export function CardHover({children, desc, src,...rest }) {
             <Container>
                 <HoverCard.Content className='CardContent'>
                     <HoverCardContent>
+                        <h3>{project.name}</h3>
+                        <Description>
+                            {project.description}
+                        </Description>
                         <Tags>
                             {
                                 tagsTitles &&
                                 tagsTitles.map(( tagTitle ) => {
                                     return (
-                                        <Tag key={tagTitle} title={tagTitle} />
+                                        <Tag key={tagTitle} title={tagTitle} isActive/>
                                     )
                                 })
                             }
