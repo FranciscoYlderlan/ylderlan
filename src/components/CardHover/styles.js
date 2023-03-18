@@ -45,12 +45,13 @@ export const HoverCardContent = styled.div`
     height: 400px;
     width: 600px;
     display: grid;
-    grid-template-rows: 1fr 6fr 3fr;
+    gap: 8px;
+    grid-template-rows: 1fr 5fr 3fr 1fr;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_600};
     border-radius: 6px;
     color: ${({theme}) => theme.COLORS.WHITE};
     text-align: center;
-    padding: 40px 10px;
+    padding: 20px 10px;
 
 `;
 
@@ -66,12 +67,16 @@ export const Description = styled.div`
     display: flex;
     text-align: justify;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
     
 `;
 
-export const ButtonLink = styled.a`
-     display: flex;
+export const AcessLink = styled.a`
+     width: 40%;
+     justify-self: center;
+     &:hover {
+        cursor: pointer;
+     }
 `;
 
 

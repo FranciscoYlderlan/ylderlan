@@ -7,6 +7,7 @@ export const Container = styled.button`
     gap: 8px;
     
     width: 100%;
+    
     color: ${({theme}) => theme.COLORS.BACKGROUND_700};
 
     background-color: ${({theme}) => theme.COLORS.DARK_YELLOW};
@@ -22,6 +23,7 @@ export const Container = styled.button`
     
     &:hover{
         filter: brightness(.8);
+        cursor: pointer;
     }
     
     &:disabled {
