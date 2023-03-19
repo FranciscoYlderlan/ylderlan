@@ -6,7 +6,7 @@ export const Container = styled.div`
     height: 100vh; 
 
     form {
-        margin-top: 25px;
+        margin-top: 15px;
         display: grid;
         gap: 20px;
 
