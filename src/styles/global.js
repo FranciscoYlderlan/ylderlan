@@ -12,5 +12,5 @@ export default createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
     }
-   
+
 `;

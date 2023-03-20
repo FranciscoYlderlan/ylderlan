@@ -12,3 +12,8 @@ export const Container = styled.div`
 
     }
 `;
+
+export const ListLinks  = styled.ul`
+    display: grid;
+    gap: 8px;
+`;

@@ -1,6 +1,6 @@
 import { Container, Logotipo ,Options } from "./styles";
 import LogoImage from "../../assets/logo.svg";
-import { TextLink } from "../TextLink";
+import { MenuOption } from "../MenuOption";
 import { useState, useEffect, useRef } from "react";
 
 export function Menu(){
@@ -20,7 +20,7 @@ export function Menu(){
             </Logotipo>
             <Options>
                 <li>
-                    <TextLink 
+                    <MenuOption 
                         title="home" 
                         to="/" 
                         onClick={(e) => handleSelected(e)}
@@ -28,7 +28,7 @@ export function Menu(){
                     />
                 </li>
                 <li>
-                    <TextLink 
+                    <MenuOption 
                         title="profile" 
                         to="/profile"
                         onClick={(e) => handleSelected(e)}
@@ -36,7 +36,7 @@ export function Menu(){
                     />
                 </li>
                 <li>
-                    <TextLink 
+                    <MenuOption 
                         title="contactMe" 
                         to="/contact"
                         onClick={(e) => handleSelected(e)}

@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Menu } from "../../components/Menu";
 import { Main } from "../../components/Main";
 import { Description } from "../../components/Description";
@@ -6,12 +7,22 @@ import { Content } from "../../components/Content";
 import { Input } from "../../components/Input";
 import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
+import { TextLink } from "../../components/TextLink";
+import { Container, ListLinks } from "./styles";
+
+
 import { MdOutlineEmail } from "react-icons/md"; 
-import { BsFillPersonFill } from "react-icons/bs"
+import { 
+         BsFillPersonFill, 
+         BsDiscord, 
+         BsLinkedin, 
+         BsGithub 
+        } from "react-icons/bs"
 
-import { useState } from "react";
 
-import { Container } from "./styles";
+
+
+
 
 export function Contact() {
     const standardMail = {
@@ -62,6 +73,32 @@ export function Contact() {
                         No momento estou disponível para novos trabalhos
                         entre em contato comigo. Vamos marcar uma reunião!
                     </p>
+                    <ListLinks>
+                        <li>
+                            <TextLink 
+                                title={'Linkedin'} 
+                                href="https://www.linkedin.com/in/franciscoylderlanoliveira/" 
+                                target='_blank'
+                                icon={BsLinkedin}
+                            />
+                        </li>
+                        <li>
+                            <TextLink 
+                                title={'Github'} 
+                                href="https://github.com/FranciscoYlderlan" 
+                                target='_blank'
+                                icon={BsGithub}
+                            />
+                        </li>
+                        <li>
+                            <TextLink 
+                                title={'Discord'} 
+                                href="https://discord.com/invite/ylderlan#6442" 
+                                target='_blank'
+                                icon={BsDiscord}
+                            />
+                        </li>
+                    </ListLinks>
                 </Description>
                 <Content title="Fale comigo">
                     <form 

@@ -1,6 +1,5 @@
 import { Container } from "./styles";
 import { Card } from "../../components/Card";
-import img1 from "../../assets/stage-5-IMC.png";
 
 import { GithubRepos } from "../../services/Github.service"
 import { useEffect, useState } from "react";

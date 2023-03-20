@@ -19,7 +19,7 @@ export const Container = styled.button`
     font-style: normal;    
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 18px;
     
     &:hover{
         filter: brightness(.8);
