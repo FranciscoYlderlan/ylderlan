@@ -14,7 +14,6 @@ import { Container, ListLinks } from "./styles";
 import { MdOutlineEmail } from "react-icons/md"; 
 import { 
          BsFillPersonFill, 
-         BsDiscord, 
          BsLinkedin, 
          BsGithub 
         } from "react-icons/bs"
@@ -88,14 +87,6 @@ export function Contact() {
                                 href="https://github.com/FranciscoYlderlan" 
                                 target='_blank'
                                 icon={BsGithub}
-                            />
-                        </li>
-                        <li>
-                            <TextLink 
-                                title={'Discord'} 
-                                href="https://discord.com/invite/ylderlan#6442" 
-                                target='_blank'
-                                icon={BsDiscord}
                             />
                         </li>
                     </ListLinks>
