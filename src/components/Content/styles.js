@@ -6,7 +6,7 @@ export const Container = styled(motion.div)`
     text-align: justify;
     
     display: grid;
-    gap: 8px;
+    gap: 6px;
     align-content: start;
     
     position: absolute;
@@ -20,7 +20,7 @@ export const Container = styled(motion.div)`
 
     color: ${({theme}) => theme.COLORS.GRAY_300};
 
-    padding: 30px;
+    padding: 20px;
     
 `;
 

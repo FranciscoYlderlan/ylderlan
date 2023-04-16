@@ -1,6 +1,11 @@
 import styled from "styled-components"
 
-export const Container = styled.textarea`
+
+export const Container = styled.div`
+    position: relative;
+`;
+
+export const BoxTextArea = styled.textarea`
     height: 250px;
     width: 100%;
     outline: none;
@@ -15,4 +20,28 @@ export const Container = styled.textarea`
     padding: 20px;
 
     resize: none;
+
+    &:focus-within {
+        /* border: 1.7px solid #9333ea ; */
+        outline: 3px solid ${({theme}) => theme.COLORS.GREEN};
+        outline-offset: -3px;
+    }
+
+    &:invalid:focus {
+        /* border: 1.7px solid #fb7185 ; */
+        outline: 3px solid ${({theme}) => theme.COLORS.YELLOW};
+        outline-offset: -3px;
+    }
+    &:invalid:focus + div {
+        display: flex;
+        width: 100%;
+        
+        align-items: center;
+        padding-left: 20px;
+        gap: 16px;
+        border-radius: 10px;
+
+        color: ${({theme}) => theme.COLORS.YELLOW};
+    }
+
 `;

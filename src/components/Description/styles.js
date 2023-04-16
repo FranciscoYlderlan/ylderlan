@@ -12,7 +12,7 @@ export const Container = styled(motion.div)`
 
     position: absolute;
 
-    padding: 30px 85px 30px 30px;
+    padding: 20px 85px 20px 20px;
     background-color: ${({theme}) => theme.COLORS.WHITE};
     color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     

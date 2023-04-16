@@ -1,13 +1,16 @@
 
 import { useState } from "react";
+
 import { Menu } from "../../components/Menu";
 import { Main } from "../../components/Main";
 import { Description } from "../../components/Description";
 import { Content } from "../../components/Content";
 import { Input } from "../../components/Input";
 import { TextArea } from "../../components/TextArea";
+
 import { Button } from "../../components/Button";
 import { TextLink } from "../../components/TextLink";
+
 import { Container, ListLinks } from "./styles";
 
 
@@ -103,7 +106,8 @@ export function Contact() {
                             icon={BsFillPersonFill}
                             name="name"
                             value={mail.name}
-                            onChange={handleChange} 
+                            onChange={handleChange}
+                            errorMessage="Este campo é obrigatório." 
                             required
                         />
                         <Input 
@@ -112,7 +116,8 @@ export function Contact() {
                             icon={MdOutlineEmail}
                             name="email"
                             value={mail.email}
-                            onChange={handleChange} 
+                            onChange={handleChange}
+                            errorMessage="Informe um email válido/Este campo é obrigatório." 
                             required
                         />
                         <TextArea 
@@ -120,6 +125,7 @@ export function Contact() {
                             name="message"
                             value={mail.message}
                             onChange={handleChange}
+                            errorMessage="Este campo é obrigatório."
                             required
                         />
                         <Button type="submit" title="Enviar"/>

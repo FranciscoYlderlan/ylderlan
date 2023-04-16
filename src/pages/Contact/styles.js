@@ -8,7 +8,7 @@ export const Container = styled.div`
     form {
         margin-top: 15px;
         display: grid;
-        gap: 20px;
+        gap: 30px;
 
     }
 `;

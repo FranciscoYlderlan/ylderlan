@@ -9,6 +9,7 @@ export default {
       GREEN: "#688c34",
       YELLOW: "#eeb933",
       DARK_YELLOW:"#c09424",
+      RED: "#D81522",
       SHADOW:"#000000B3",
 
       GRAY_300: "#dadadb",
