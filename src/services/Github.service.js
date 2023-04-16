@@ -48,8 +48,8 @@ export class GithubRepos {
 
     static getPageURL(repository){
         const {name, html_url, homepage, has_pages} = repository;     
-        if(has_pages){
-            const existHomePage = homepage && homepage !== ""; 
+        const existHomePage = homepage && homepage !== ""; 
+        if(has_pages || existHomePage){
             
             if(existHomePage) return homepage.includes("https://")? homepage :`https://${homepage}/`; 
             
