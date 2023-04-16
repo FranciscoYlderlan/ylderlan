@@ -1,5 +1,6 @@
 import { Container } from "./styles";
 import { Card } from "../../components/Card";
+import { isUplouded } from "../../providers/utils";
 
 import { GithubRepos } from "../../services/Github.service"
 import { useEffect, useState } from "react";
@@ -7,26 +8,6 @@ import { useEffect, useState } from "react";
 export function Viewer({filter=null,...rest}) {
         
     const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-       
-        async function fetchRepos() {
-            const repositories = await GithubRepos.searchRepos(); 
-            return repositories;
-        }
-
-        try {
-            fetchRepos().then( response => { 
-                if(!response) {
-                     alert('Não foi possível carregar a listagem');
-                }
-                setProjects(response);
-            })
-        } catch (error) {
-            console.log(error);
-        }
-        
-    },[])
 
     useEffect(() => {
        
@@ -62,7 +43,7 @@ export function Viewer({filter=null,...rest}) {
                             }}
                             initial={{ opacity: 0}} 
                             key={project.name} 
-                            uploaded={project.has_pages} 
+                            uploaded={isUplouded(project)} 
                             project={project}
                         />
                     ) 

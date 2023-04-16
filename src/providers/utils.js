@@ -67,7 +67,18 @@ function tagsTitleGenerator({name,description}){
     return uniqueTags
 }
 
+
+function isUplouded(project){
+        
+    const {name ,homepage, has_pages} = project;
+    const existHomepage = (homepage && homepage !== "");
+    return (has_pages || existHomepage);
+    
+}
+
+
 export {
     sorted,
-    tagsTitleGenerator
+    tagsTitleGenerator,
+    isUplouded,
 }

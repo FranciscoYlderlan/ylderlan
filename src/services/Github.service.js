@@ -29,10 +29,10 @@ export class GithubRepos {
         if(option.includes("all")) return aux;  
 
         if(option.includes("code"))
-            aux = aux.filter(repos => !repos.has_pages);
+            aux = aux.filter(repos => !utils.isUplouded(repos));
         
         if(option.includes("page"))
-            aux = aux.filter(repos => repos.has_pages);
+            aux = aux.filter(repos => utils.isUplouded(repos));
         
         if(option.includes("new"))
             aux = aux.sort((repos1, repos2) => 
@@ -48,7 +48,8 @@ export class GithubRepos {
 
     static getPageURL(repository){
         const {name, html_url, homepage, has_pages} = repository;     
-        const existHomePage = homepage && homepage !== ""; 
+        const existHomePage = (homepage && homepage !== "");
+ 
         if(has_pages || existHomePage){
             
             if(existHomePage) return homepage.includes("https://")? homepage :`https://${homepage}/`; 
