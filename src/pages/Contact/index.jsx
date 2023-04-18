@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useRef } from "react";
 
 import { Menu } from "../../components/Menu";
 import { Main } from "../../components/Main";
@@ -11,8 +11,10 @@ import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
 import { TextLink } from "../../components/TextLink";
 
-import { Container, ListLinks } from "./styles";
+import emailjs from '@emailjs/browser';
 
+
+import { Container, ListLinks } from "./styles";
 
 import { MdOutlineEmail } from "react-icons/md"; 
 import { 
@@ -22,50 +24,32 @@ import {
         } from "react-icons/bs"
 
 
-
-
-
-
 export function Contact() {
-    const standardMail = {
-        name: '',
-        email: '',
-        subject: 'StaticForms - Contact Form',
-        honeypot: '', // if any value received in this field, form submission will be ignored.
-        message: '',
-        replyTo: '@', // this will set replyTo of email to email address entered in the form
-        accessKey: '1cd2bec0-2204-4068-aab9-8529a3321afc' // get your access key from https://www.staticforms.xyz
-    }
-    const [mail, setMail] = useState(standardMail);
-        
-    const handleChange = e => setMail({ ...mail, [e.target.name]: e.target.value });
-    
-    const handleSubmit = async e => {
-        
-        e.preventDefault();
-        
-        try {
-            const res = await fetch('https://api.staticforms.xyz/submit', {
-                method: 'POST',
-                body: JSON.stringify(mail),
-                headers: { 'Content-Type': 'application/json' }
-            });
-    
-            const json = await res.json();
-        
-            if (json.success) {
-                alert('Obrigado por entrar em contato!');
-            } else {
-                alert(json.message);
-            }
-        } catch (error) {
-            console.log('An error occurred', error);
-            alert('Um error ocorreu ao tentar enviar sua mensagem.');
-        }finally{
-            setMail(standardMail);
-        } 
-    };
+    // const standardMail = {
+    //     from_name: '',
+    //     email: '',
+    //     message:'',
+    // }
+    const form = useRef();
 
+    // const [mail, setMail] = useState(standardMail);      
+    // const handleChange = e => setMail({ ...mail, [e.target.name]: e.target.value });
+    
+    function sendEmail (e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('email_profile', 'template_rhk9ith', form.current, 'UetXQQtxVgOnjK8_2')
+            .then((result) => {
+                alert('Obrigado por entrar em contato!');
+                console.log(result.text);
+            }, (error) => {
+                alert('Ocorreu um erro ao tentar enviar email.');
+                console.log(error.text);
+            }).finally(() => {
+                e.target.reset();
+            });
+    };
+    
     return (
         <Container>
             <Menu/>
@@ -95,18 +79,12 @@ export function Contact() {
                     </ListLinks>
                 </Description>
                 <Content title="Fale comigo">
-                    <form 
-                        action="https://api.staticforms.xyz/submit" 
-                        method="post"
-                        onSubmit={handleSubmit}
-                    >
+                    <form ref={form} onSubmit={sendEmail}>
                         <Input 
                             type="text" 
                             placeholder="Informe seu nome" 
                             icon={BsFillPersonFill}
-                            name="name"
-                            value={mail.name}
-                            onChange={handleChange}
+                            name="from_name"
                             errorMessage="Este campo é obrigatório." 
                             required
                         />
@@ -115,20 +93,16 @@ export function Contact() {
                             placeholder="Informe seu email" 
                             icon={MdOutlineEmail}
                             name="email"
-                            value={mail.email}
-                            onChange={handleChange}
                             errorMessage="Informe um email válido/Este campo é obrigatório." 
                             required
                         />
                         <TextArea 
                             placeholder="Informe sua mensagem" 
                             name="message"
-                            value={mail.message}
-                            onChange={handleChange}
                             errorMessage="Este campo é obrigatório."
                             required
                         />
-                        <Button type="submit" title="Enviar"/>
+                        <Button type="submit" value="Send" title="Enviar"/>
                     </form>
                 </Content>
             </Main>
