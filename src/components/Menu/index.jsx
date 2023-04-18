@@ -1,16 +1,21 @@
 import { Container, Logotipo ,Options } from "./styles";
 import LogoImage from "../../assets/logo.svg";
 import { MenuOption } from "../MenuOption";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom'
+
 
 export function Menu(){
     
-    const [selected, setSelected] = useState(localStorage.getItem('@ylderlan:optionSelected'));
+    const location = useLocation();
+
+    const [selected, setSelected] = useState(location.pathname);
 
     function handleSelected(e) {
-        localStorage.setItem('@ylderlan:optionSelected', e.target.title);
-        setSelected(e.target.title);
+        localStorage.setItem('@ylderlan:optionSelected', e.target.pathname);
+        setSelected(e.target.pathname);
     }
+
 
     return (
         <Container>
@@ -21,26 +26,29 @@ export function Menu(){
             <Options>
                 <li>
                     <MenuOption 
-                        title="home" 
+                        title="home"
+                        pathname='/'
                         to="/" 
                         onClick={(e) => handleSelected(e)}
-                        active = {selected == 'home'}
+                        active = {selected == '/'}
                     />
                 </li>
                 <li>
                     <MenuOption 
-                        title="profile" 
+                        title="profile"
+                        pathname="/profile" 
                         to="/profile"
                         onClick={(e) => handleSelected(e)}
-                        active = {selected == 'profile'}
+                        active = {selected == '/profile'}
                     />
                 </li>
                 <li>
                     <MenuOption 
                         title="contactMe" 
+                        pathname="/contact"
                         to="/contact"
                         onClick={(e) => handleSelected(e)}
-                        active = {selected == 'contactMe'}
+                        active = {selected == '/contact'}
                     />
                 </li>
             </Options>
