@@ -7,6 +7,9 @@ export default createGlobalStyle`
         box-sizing: border-box;
         list-style: none;
         text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
     }
     body{
         font-family: 'Poppins', sans-serif;

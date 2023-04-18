@@ -26,11 +26,13 @@ export function Home() {
             <Main>
                 <Description title="Experiência">
                     <p>
-                        Desenvolvo pequenas aplicações <strong>front-end</strong> e 
-                        <strong> back-end</strong>. Aspiro diariamente conhecer, 
-                        utilizar e aprender sobre as novas ferramentas que surgem 
-                        na comunidade buscando sempre evoluir e aprimorar meus 
-                        conhecimentos sobre essa vasta área da programação.
+                        Um apaixonado pela programação e em ajudar e contribuir
+                        com meus conhecimentos. Desenvolvo aplicações
+                        <strong> front-end</strong> e <strong> back-end</strong>. 
+                        Aspiro diariamente conhecer, utilizar e aprender sobre 
+                        novas ferramentas que surgem na comunidade buscando
+                        sempre evoluir e aprimorar meus conhecimentos sobre essa 
+                        vasta área da programação.
                     </p>
                 </Description>
                 <Content title="Principais Tecnologias">

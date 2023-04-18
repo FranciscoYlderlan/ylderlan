@@ -62,15 +62,17 @@ export function Profile() {
                 <Description title="Produções">
                     <p>
                         Os projetos aqui demonstrados, em sua maioria, foram 
-                        desenvolvidos utilizando linguagem<strong> Javascript</strong>. 
-                        Em <strong>front-ends</strong>, também utilizo da biblioteca 
-                        <strong> React</strong>, além de variadas <strong>API's</strong> dependendo 
-                        do escopo do projeto.
+                        desenvolvidos utilizando <strong>Javascript</strong> e 
+                        <strong> Typescript</strong>. Em <strong>front-ends</strong>, 
+                        também utilizo da biblioteca <strong>React</strong> e/ou 
+                        <strong> React Native</strong>, além de variadas <strong>API's </strong> 
+                        e <strong>bibliotecas</strong>, dependendo do escopo de cada projeto.
                     </p>
                     <p>
                         No desenvolvimento de <strong>back-ends </strong> 
-                        utilizo a ferramenta de denvolvimento <strong>NodeJS </strong>
-                        para instalação e gerenciamento de pacotes. 
+                        utilizo a ferramenta de gerenciamento de ambiente 
+                        <strong> NodeJS </strong> para configuração 
+                        instalação de pacotes. 
                         {/* Para manipulação do banco de dados geralmente uso
                         <strong> Knex</strong> como query builder ou mesmo 
                         <strong> Prisma</strong> como ORM. */}
@@ -79,7 +81,7 @@ export function Profile() {
                 <Content title="Projetos Pessoais">
                     <p>
                         Meus projetos públicos concluídos ou em 
-                        desenvolvimento lançados no meu perfil 
+                        desenvolvimento acessados diretamente do meu perfil 
                         do Github.
                     </p>
                     <Tags>
