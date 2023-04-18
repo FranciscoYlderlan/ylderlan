@@ -44,35 +44,35 @@ export function Home() {
                         <IconLink size={100} title="Html5" icon={AiFillHtml5}
                             href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
                         />
-                        <IconLink size={90} title="Javascript" icon={SiJavascript}
-                            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
-                        />
                         <IconLink size={100} title="CSS" icon={DiCss3}
                             href="https://developer.mozilla.org/en-US/docs/Learn/CSS"
+                        />
+                        <IconLink size={90} title="Javascript" icon={SiJavascript}
+                            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
                         />
                         <IconLink size={90} title="Typescript" icon={SiTypescript}
                             href="https://www.typescriptlang.org/"
                         />
                         <IconLink size={100} title="React" icon={FaReact}
-                            href="https://pt-br.reactjs.org/"
-                        />
-                        <IconLink size={90} title="Jest" icon={SiJest}
-                            href="https://jestjs.io/pt-BR/"
-                        />
-                        <IconLink size={100} title="Styled-Components" icon={SiStyledcomponents}
-                            href="https://styled-components.com/"
+                            href="https://legacy.reactjs.org/docs/getting-started.html"
                         />
                         <IconLink size={100} title="NodeJs" icon={FaNodeJs}
-                            href="https://nodejs.org/en/"
-                        />
-                        <IconLink size={100} title="Tailwindcss" icon={SiTailwindcss}
-                            href="https://tailwindcss.com/"
+                            href="https://nodejs.org/en/about"
                         />
                         <IconLink size={90} title="Prisma" icon={SiPrisma}
                             href="https://www.prisma.io/"
                         />
                         <IconLink size={100} title="Fastify" icon={SiFastify}
-                            href="https://www.fastify.io/"
+                          href="https://www.fastify.io/"
+                        />
+                        <IconLink size={100} title="Tailwindcss" icon={SiTailwindcss}
+                            href="https://tailwindcss.com/"
+                        />
+                        <IconLink size={100} title="Styled-Components" icon={SiStyledcomponents}
+                            href="https://styled-components.com/"
+                        />
+                        <IconLink size={90} title="Jest" icon={SiJest}
+                            href="https://jestjs.io/pt-BR/"
                         />
                     </Tools>
                 </Content>
