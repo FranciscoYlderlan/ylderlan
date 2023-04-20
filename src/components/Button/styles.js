@@ -4,7 +4,7 @@ export const Container = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: .8rem;
     
     width: 100%;
     
@@ -12,14 +12,14 @@ export const Container = styled.button`
 
     background-color: ${({theme}) => theme.COLORS.DARK_YELLOW};
     border: none;
-    border-radius: 8px;
-    padding: 16px 0;
+    border-radius: .8rem;
+    padding: 1.6rem 0;
     
     transition: filter .3s;
     font-style: normal;    
     font-weight: 700;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
     
     &:hover{
         filter: brightness(.8);

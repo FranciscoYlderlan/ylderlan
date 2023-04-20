@@ -8,29 +8,29 @@ const breatheAnimation = keyframes`
 `;
 
 const shownUp = keyframes`
-0% { transform: translateY(95px); }
-35% { transform: translateY(100px); }
-70% { transform: translateY(105px); }
-100% { transform: translateY(110px); }
+0% { transform: translateY(9.5rem); }
+35% { transform: translateY(10rem); }
+70% { transform: translateY(10.5rem); }
+100% { transform: translateY(11rem); }
 `;
 
 
 const shownDown = keyframes`
- 0% { transform: translateY(-85px); }
- 35% { transform: translateY(-90px); }
- 75% { transform: translateY(-95px); }
- 100% { transform: translateY(-100px); }
+ 0% { transform: translateY(-8.5rem); }
+ 35% { transform: translateY(-9rem); }
+ 75% { transform: translateY(-9.5rem); }
+ 100% { transform: translateY(-10rem); }
 `;
 
 export const Container = styled.div`
     
     .CardContent[data-side='top'] {
-        transform: translateY(110px);
+        transform: translateY(11rem);
         animation: ${breatheAnimation} .3s ease-in, ${shownUp} .3s ease-in-out;
 
     }
     .CardContent[data-side='bottom'] {
-        transform: translateY(-100px);
+        transform: translateY(-10rem);
         animation: ${breatheAnimation} .3s ease-in, ${shownDown} .3s ease-in-out;
         
     }
@@ -42,16 +42,16 @@ export const Container = styled.div`
 `;
 
 export const HoverCardContent = styled.div`   
-    height: 400px;
-    width: 600px;
+    height: 40rem;
+    width: 60rem;
     display: grid;
-    gap: 8px;
+    gap: .8rem;
     grid-template-rows: 1fr 5fr 3fr 1fr;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_600};
-    border-radius: 6px;
+    border-radius: .6rem;
     color: ${({theme}) => theme.COLORS.WHITE};
     text-align: center;
-    padding: 20px 10px;
+    padding: 2rem 1rem;
 
 `;
 
@@ -60,14 +60,14 @@ export const Tags = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: .8rem;
 `;
 
 export const Description = styled.div`
     display: flex;
     text-align: justify;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 2rem;
     
 `;
 

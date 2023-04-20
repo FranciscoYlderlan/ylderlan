@@ -5,7 +5,7 @@ export const Container = styled(Link)`
     position:relative;
     
     display: flex;
-    gap: 8px;
+    gap: .8rem;
     
     color: ${({theme, active}) => active ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE} !important;
     background: ${({theme, active}) => active ? theme.COLORS.DARK_YELLOW : theme.COLORS.BACKGROUND_700};
@@ -18,8 +18,8 @@ export const Container = styled(Link)`
 
     font-style: normal;
     font-weight: ${({active}) => active ? 700 : 500};
-    font-size: 16px;
-    line-height: 44px;
+    font-size: 1.6rem;
+    line-height: 4.4rem;
     
     &::after{
         position: absolute;        
@@ -32,8 +32,8 @@ export const Container = styled(Link)`
         text-align: center;
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 44px;
+        font-size: 1.6rem;
+        line-height: 4.4rem;
 
         background: ${({theme}) => theme.COLORS.DARK_YELLOW};
         width: 0;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const Container = styled(motion.div)`
     width: 100%;
-    height: 250px;
+    height: 25rem;
     position: relative;
 
     &:hover {
@@ -17,21 +17,21 @@ export const Tags = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    gap: 8px;
+    gap: .8rem;
     color: black;
     font-style: normal;    
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
 `;
 
 export const View = styled.div`
     width: 100%;
     height: 100%;
-    border-radius: 4px;
+    border-radius: .4rem;
 
     display: grid;
-    gap: 14px;
+    gap: 1.4rem;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     
@@ -44,8 +44,8 @@ export const View = styled.div`
     }
     font-style: normal;    
     font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
 
     background-color: ${({theme,uploaded}) => uploaded? theme.COLORS.GREEN : theme.COLORS.DARK_YELLOW};
     color: ${({theme,uploaded}) => uploaded? theme.COLORS.WHITE : "black"};

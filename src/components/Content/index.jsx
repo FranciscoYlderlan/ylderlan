@@ -9,7 +9,7 @@ export function Content({ title, children }) {
                 delay: 0.1,
                 type:"tween"
             }}
-            initial={{ opacity: .3, scale: .5, filter:"blur(12px)" }}
+            initial={{ opacity: .3, scale: .5, filter:"blur(1.2rem)" }}
         >
             <h2>{ title }</h2>
             { children }

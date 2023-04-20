@@ -21,13 +21,13 @@ export const Logotipo = styled.div`
         text-align: center;
         font-weight: 500;
 
-        padding: 10px;
+        padding: 1rem;
         background-color: ${({theme})=> theme.COLORS.GRAY_300};
     }
 `;
  
 export const Options = styled.ul`
-    margin-top: 100px;
+    margin-top: 10rem;
 
     display: grid;
 
@@ -47,8 +47,8 @@ export const Options = styled.ul`
     }
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
 
 
 `;

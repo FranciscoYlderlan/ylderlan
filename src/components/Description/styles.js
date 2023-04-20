@@ -6,13 +6,13 @@ export const Container = styled(motion.div)`
     text-align: justify;
     
     display: grid;
-    gap: 25px;
+    gap: 2.5rem;
     align-content: start;
     justify-items: start;  
 
     position: absolute;
 
-    padding: 20px 85px 20px 20px;
+    padding: 2rem 8.5rem 2rem 2rem;
     background-color: ${({theme}) => theme.COLORS.WHITE};
     color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     
@@ -25,6 +25,6 @@ export const Container = styled(motion.div)`
 
     align-self: start;
     
-    box-shadow: 0px 2px 5px ${({theme}) => theme.COLORS.SHADOW};
+    box-shadow: 0rem .2rem .5rem ${({theme}) => theme.COLORS.SHADOW};
    
 `;

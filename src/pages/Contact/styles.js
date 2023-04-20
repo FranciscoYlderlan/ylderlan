@@ -6,14 +6,14 @@ export const Container = styled.div`
     height: 100vh; 
 
     form {
-        margin-top: 15px;
+        margin-top: 1.5rem;
         display: grid;
-        gap: 30px;
+        gap: 3.0rem;
 
     }
 `;
 
 export const ListLinks  = styled.ul`
     display: grid;
-    gap: 8px;
+    gap: .8rem;
 `;

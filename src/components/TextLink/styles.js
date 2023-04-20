@@ -6,7 +6,7 @@ export const Container = styled.a`
     perspective:600;
 
     display: flex;
-    gap: 8px;
+    gap: .8rem;
     
     color: ${({theme}) => theme.COLORS.BACKGROUND_700 };
     
@@ -18,13 +18,13 @@ export const Container = styled.a`
 
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 2rem;
     &::after{
         position: absolute;
         content: "";
         width: 0;
-        height: 2.7px;
+        height: .27rem;
         bottom: -20%;
         left: 30%;
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_700};

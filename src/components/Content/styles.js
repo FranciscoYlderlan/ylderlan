@@ -6,7 +6,7 @@ export const Container = styled(motion.div)`
     text-align: justify;
     
     display: grid;
-    gap: 6px;
+    gap: .6rem;
     align-content: start;
     
     position: absolute;
@@ -16,11 +16,11 @@ export const Container = styled(motion.div)`
     width: 50%;
     left: 40%;
     bottom: 10%;
-    box-shadow: 0px 2px 5px ${({theme}) => theme.COLORS.SHADOW};
+    box-shadow: 0rem .2rem .5rem ${({theme}) => theme.COLORS.SHADOW};
 
     color: ${({theme}) => theme.COLORS.GRAY_300};
 
-    padding: 20px;
+    padding: 2rem;
     
 `;
 

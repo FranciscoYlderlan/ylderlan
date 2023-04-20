@@ -8,10 +8,10 @@ export const Container = styled.div`
 
 export const Tools = styled.div`
 
-        margin-top: 20px;
+        margin-top: 2.0rem;
 
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         align-items: center;
-        gap: 20px;
+        gap: 2.0rem;
 `;
