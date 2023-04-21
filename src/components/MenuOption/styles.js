@@ -18,7 +18,7 @@ export const Container = styled(Link)`
 
     font-style: normal;
     font-weight: ${({active}) => active ? 700 : 500};
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     line-height: 4.4rem;
     
     &::after{
@@ -32,7 +32,7 @@ export const Container = styled(Link)`
         text-align: center;
         font-style: normal;
         font-weight: 700;
-        font-size: 1.6rem;
+        /* font-size: 1.6rem; */
         line-height: 4.4rem;
 
         background: ${({theme}) => theme.COLORS.DARK_YELLOW};

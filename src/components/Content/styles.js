@@ -6,6 +6,9 @@ export const Container = styled(motion.div)`
     text-align: justify;
     
     display: grid;
+    
+    grid-template-rows: 5rem fill;
+    
     gap: .6rem;
     align-content: start;
     

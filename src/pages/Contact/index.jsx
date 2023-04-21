@@ -14,7 +14,7 @@ import { TextLink } from "../../components/TextLink";
 import emailjs from '@emailjs/browser';
 
 
-import { Container, ListLinks } from "./styles";
+import { Container, Form, ListLinks } from "./styles";
 
 import { MdOutlineEmail } from "react-icons/md"; 
 import { 
@@ -79,7 +79,7 @@ export function Contact() {
                     </ListLinks>
                 </Description>
                 <Content title="Fale comigo">
-                    <form ref={form} onSubmit={sendEmail}>
+                    <Form ref={form} onSubmit={sendEmail}>
                         <Input 
                             type="text" 
                             placeholder="Informe seu nome" 
@@ -103,7 +103,7 @@ export function Contact() {
                             required
                         />
                         <Button type="submit" value="Send" title="Enviar"/>
-                    </form>
+                    </Form>
                 </Content>
             </Main>
         </Container>

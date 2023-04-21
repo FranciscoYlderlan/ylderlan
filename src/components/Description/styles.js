@@ -12,16 +12,15 @@ export const Container = styled(motion.div)`
 
     position: absolute;
 
-    padding: 2rem 8.5rem 2rem 2rem;
+    padding: 2rem 5.5% 2rem 2rem;
     background-color: ${({theme}) => theme.COLORS.WHITE};
     color: ${({theme}) => theme.COLORS.BACKGROUND_700};
     
-    width: 35%;
+    width: 30vw;
     height: 45vh;
     left: 10%;
     top: 10%;
 
-   
 
     align-self: start;
     

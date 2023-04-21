@@ -18,7 +18,7 @@ export const Container = styled.a`
 
     font-style: normal;
     font-weight: 700;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     line-height: 2rem;
     &::after{
         position: absolute;

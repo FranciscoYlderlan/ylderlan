@@ -21,7 +21,7 @@ export const Tags = styled.div`
     color: black;
     font-style: normal;    
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: clamp(.3, -.3rem + 1vw, 1.4rem); 
     line-height: 1.6rem;
 `;
 
@@ -44,7 +44,7 @@ export const View = styled.div`
     }
     font-style: normal;    
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: clamp(.6rem, -.2rem + 1vw, 2.4rem);
     line-height: 3.2rem;
 
     background-color: ${({theme,uploaded}) => uploaded? theme.COLORS.GREEN : theme.COLORS.DARK_YELLOW};
