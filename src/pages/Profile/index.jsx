@@ -81,7 +81,7 @@ export function Profile() {
                 <Content title="Projetos Pessoais">
                     <p>
                         Meus projetos públicos concluídos ou em 
-                        desenvolvimento acessados diretamente do meu perfil 
+                        desenvolvimento acessados diretamente do meu repositório 
                         do Github.
                     </p>
                     <Tags>
