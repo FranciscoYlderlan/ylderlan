@@ -6,9 +6,11 @@ export const Container = styled(motion.div)`
     width: 100%;
     height: 25rem;
     position: relative;
-
+    transition: filter .6s;
+    
     &:hover {
         cursor: pointer;
+        filter:brightness(0.5); 
     }
 `;
 
@@ -34,7 +36,8 @@ export const View = styled.div`
     gap: 1.4rem;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
-    
+  
+    padding: .5rem;
 
     >h2 {
         align-self: flex-end;    

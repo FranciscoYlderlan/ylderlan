@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container, Details } from "./styles";
 
 export function Content({ title, children }) {
     return (
@@ -12,7 +12,9 @@ export function Content({ title, children }) {
             initial={{ opacity: .3, scale: .5, filter:"blur(1.2rem)" }}
         >
             <h2>{ title }</h2>
-            { children }
+            <Details>
+                { children }
+            </Details>
         </Container>
     );
 }

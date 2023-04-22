@@ -15,7 +15,7 @@ export const Tools = styled.div`
 
     align-content: start;
 
-    height: 50vh;
+    height: 85%;
 
     margin-top: 2.0rem;
     padding: 2.0rem 1rem;

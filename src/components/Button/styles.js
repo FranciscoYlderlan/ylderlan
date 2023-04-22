@@ -13,7 +13,7 @@ export const Container = styled.button`
     background-color: ${({theme}) => theme.COLORS.DARK_YELLOW};
     border: none;
     border-radius: .8rem;
-    padding: 1.6rem 0;
+    padding: 1rem 0;
     
     transition: filter .3s;
     font-style: normal;    

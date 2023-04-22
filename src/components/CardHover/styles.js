@@ -42,8 +42,8 @@ export const Container = styled.div`
 `;
 
 export const HoverCardContent = styled.div`   
-    height: 40rem;
-    width: 60rem;
+    height: 50vh;
+    width: 40vw;
     display: grid;
     gap: .8rem;
     grid-template-rows: 1fr 5fr 3fr 1fr;

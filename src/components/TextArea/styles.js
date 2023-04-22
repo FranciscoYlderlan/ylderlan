@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const BoxTextArea = styled.textarea`
-    height: 25rem;
+    height: 15rem;
     width: 100%;
     outline: none;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};

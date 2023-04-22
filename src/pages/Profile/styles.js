@@ -12,8 +12,8 @@ export const Tags = styled.div`
     
     display: flex;
     gap: 2rem;
-    height: 6rem;
-    
+    height: fit-content;
+    margin: 1.6rem 0;
     align-items: flex-end;
     
     

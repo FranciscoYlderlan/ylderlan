@@ -22,7 +22,7 @@ export const BoxInput = styled.div`
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
         color: ${({theme}) => theme.COLORS.WHITE};
         border: none;
-        padding: 2rem 0;
+        padding: 1rem 0;
         padding-right: 2rem;
         width: 100%;
 

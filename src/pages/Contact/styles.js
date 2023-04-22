@@ -13,13 +13,13 @@ export const ListLinks  = styled.ul`
 
 export const Form = styled.form`
     
-    
     display: grid;
-    gap: 3.0rem;
+    gap: 2.5rem;
 
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding-right: .5rem;
     
+    height: 100%;
 
     overflow-y: auto;
 

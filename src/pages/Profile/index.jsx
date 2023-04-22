@@ -83,7 +83,7 @@ export function Profile() {
                         Meus projetos públicos concluídos ou em 
                         desenvolvimento acessados diretamente do meu repositório 
                         do Github.
-                    </p>
+                    </p>   
                     <Tags>
                         <Tag 
                             isActive={option.includes('all')}
@@ -111,9 +111,18 @@ export function Profile() {
                             onClick={() => handleSelectionOptions('code')}
                         />
                     </Tags>
+
+                    <Viewer filter={option}/>
+                    
+                    {/* <p>
+                        Meus projetos públicos concluídos ou em 
+                        desenvolvimento acessados diretamente do meu repositório 
+                        do Github.
+                    </p>
+                    
                     <Viewer filter={option}/>
 
-                    
+                     */}
                 </Content>
             </Main>
         </Container>

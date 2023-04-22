@@ -10,8 +10,7 @@ export const Container = styled.div`
     border-radius: .8rem;
     
     width: 100%;
-    height: 90%;
-    margin-top: 2.5rem;
+    height: 70%;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
 
     overflow-y: overlay;
