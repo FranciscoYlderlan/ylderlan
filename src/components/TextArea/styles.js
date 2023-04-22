@@ -13,7 +13,6 @@ export const BoxTextArea = styled.textarea`
     color: ${({theme}) => theme.COLORS.WHITE};
     font-style: normal;
     font-weight: 400;
-    /* font-size: 1.6rem; */
     line-height: 1.9rem;
     border: none;
     border-radius: 1rem;

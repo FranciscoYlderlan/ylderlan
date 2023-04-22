@@ -19,7 +19,8 @@ export default createGlobalStyle`
     }
     body,
     input,
-    button {
+    button,
+    textarea {
         font-size: 1.6rem;
         font-family: 'Poppins', sans-serif;
     
@@ -30,7 +31,8 @@ export default createGlobalStyle`
     
     body,
     input,
-    button {
+    button,
+    textarea {
         
         font-size: clamp(.4rem,-0.1rem + 1vw, 1.6rem);
         font-family: 'Poppins', sans-serif;

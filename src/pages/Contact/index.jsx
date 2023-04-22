@@ -14,7 +14,7 @@ import { TextLink } from "../../components/TextLink";
 import emailjs from '@emailjs/browser';
 
 
-import { Container, Form, ListLinks } from "./styles";
+import { Container, Form, Inputs, ListLinks } from "./styles";
 
 import { MdOutlineEmail } from "react-icons/md"; 
 import { 
@@ -80,28 +80,30 @@ export function Contact() {
                 </Description>
                 <Content title="Fale comigo">
                     <Form ref={form} onSubmit={sendEmail}>
-                        <Input 
-                            type="text" 
-                            placeholder="Informe seu nome" 
-                            icon={BsFillPersonFill}
-                            name="from_name"
-                            errorMessage="Este campo é obrigatório." 
-                            required
-                        />
-                        <Input 
-                            type="email" 
-                            placeholder="Informe seu email" 
-                            icon={MdOutlineEmail}
-                            name="email"
-                            errorMessage="Informe um email válido/Este campo é obrigatório." 
-                            required
-                        />
-                        <TextArea 
-                            placeholder="Informe sua mensagem" 
-                            name="message"
-                            errorMessage="Este campo é obrigatório."
-                            required
-                        />
+                        <Inputs>
+                            <Input
+                                type="text"
+                                placeholder="Informe seu nome"
+                                icon={BsFillPersonFill}
+                                name="from_name"
+                                errorMessage="Este campo é obrigatório."
+                                required
+                            />
+                            <Input
+                                type="email"
+                                placeholder="Informe seu email"
+                                icon={MdOutlineEmail}
+                                name="email"
+                                errorMessage="Informe um email válido/Este campo é obrigatório."
+                                required
+                            />
+                            <TextArea
+                                placeholder="Informe sua mensagem"
+                                name="message"
+                                errorMessage="Este campo é obrigatório."
+                                required
+                            />
+                        </Inputs>
                         <Button type="submit" value="Send" title="Enviar"/>
                     </Form>
                 </Content>

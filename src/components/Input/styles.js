@@ -22,7 +22,7 @@ export const BoxInput = styled.div`
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
         color: ${({theme}) => theme.COLORS.WHITE};
         border: none;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         padding-right: 2rem;
         width: 100%;
 
@@ -30,7 +30,6 @@ export const BoxInput = styled.div`
         
         font-style: normal;
         font-weight: 400;
-        /* font-size: 1.6rem; */
         line-height: 2.1rem;
         
         outline: none;

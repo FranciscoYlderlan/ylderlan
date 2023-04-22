@@ -14,15 +14,14 @@ export const ListLinks  = styled.ul`
 export const Form = styled.form`
     
     display: grid;
-    gap: 2.5rem;
-
+    align-content: space-between;
+ 
     margin-top: 1rem;
     padding-right: .5rem;
     
     height: 100%;
 
     overflow-y: auto;
-
     
     &::-webkit-scrollbar {
         width: 2.4rem;
@@ -35,6 +34,11 @@ export const Form = styled.form`
         border-radius: 3.2rem; 
         background-clip: padding-box;
     }
-
     
+`;
+
+export const Inputs = styled.div`
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2rem;
 `;
