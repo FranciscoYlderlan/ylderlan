@@ -5,6 +5,8 @@ export const Container = styled.a`
     width: 100%;
     color: ${({theme}) => theme.COLORS.WHITE};
     
+    justify-content: center;
+    align-items: center;
     transition: transform .5s;
     
     &:hover{

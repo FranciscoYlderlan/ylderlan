@@ -18,7 +18,7 @@ export const Tools = styled.div`
     height: 85%;
 
     margin-top: 2.0rem;
-    padding: 2.0rem 1rem;
+    padding: 1rem 0rem;
     
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
     border-radius: 0.4rem;
