@@ -8,7 +8,7 @@ export class GithubRepos {
         const result = await fetch(endpoint,
         {
             headers:{
-                'Authorization': 'Bearer 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'
+                'Authorization': 'Bearer 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'
             }
         });
         const repos_infos = await result.json();
