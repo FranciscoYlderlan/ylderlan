@@ -5,7 +5,12 @@ export class GithubRepos {
 
     static async searchRepos() {
         const endpoint = `https://api.github.com/users/franciscoylderlan/repos`
-        const result = await fetch(endpoint);
+        const result = await fetch(endpoint,{
+        headers:{
+           'Content-Type': 'application/json',
+            'Authorization': 'Bearer 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'
+        }
+        });
         const repos_infos = await result.json();
         let formatted_repos_infos = []; 
         Object.values(repos_infos).map(
