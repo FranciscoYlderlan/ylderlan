@@ -3,13 +3,13 @@ import * as utils from "../providers/utils.js"
 export class GithubRepos {
     
 
-    static async searchRepos() {
-        const endpoint = `https://api.github.com/users/franciscoylderlan/repos`
-        const result = await fetch(endpoint,{
-        headers:{
-           'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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'
-        }
+    static async searchRepos(sort='',direction='') {
+        const endpoint = `https://api.github.com/users/franciscoylderlan/repos?sort=${sort}&direction=${direction}`
+        const result = await fetch(endpoint,
+        {
+            headers:{
+                'Authorization': 'Bearer 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'
+            }
         });
         const repos_infos = await result.json();
         let formatted_repos_infos = []; 
@@ -29,7 +29,19 @@ export class GithubRepos {
 
     static async filterRepos(option = ["all"]){
         
-        let aux = await GithubRepos.searchRepos();
+        let sort = '';
+        let direction = '';
+        
+        if(option.includes("new") || option.includes("old")){
+            sort = 'true';
+            if(option.includes("new")){
+                direction='asc';
+            }else{
+                direction='desc';
+            }
+        }
+        
+        let aux = await GithubRepos.searchRepos(sort,direction);
 
         if(option.includes("all")) return aux;  
 
@@ -39,13 +51,13 @@ export class GithubRepos {
         if(option.includes("page"))
             aux = aux.filter(repos => utils.isUplouded(repos));
         
-        if(option.includes("new"))
-            aux = aux.sort((repos1, repos2) => 
-            utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at)));
+        // if(option.includes("new"))
+        //     aux = aux.sort((repos1, repos2) => 
+        //     utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at)));
         
-        if(option.includes("old"))
-            aux = aux.sort((repos1, repos2) => 
-            utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at), "decre"));
+        // if(option.includes("old"))
+        //     aux = aux.sort((repos1, repos2) => 
+        //     utils.sorted(Date.parse(repos1.created_at),Date.parse(repos2.created_at), "decre"));
         
         return aux
           
