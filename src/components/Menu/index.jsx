@@ -1,6 +1,7 @@
 import { Container, Logotipo ,Options } from "./styles";
 import LogoImage from "../../assets/logo.svg";
 import { MenuOption } from "../MenuOption";
+import { MenuHamburguer } from "../MenuHamburguer";
 import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom'
 
@@ -10,6 +11,12 @@ export function Menu(){
     const location = useLocation();
 
     const [selected, setSelected] = useState(location.pathname);
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+      setIsOpen(!isOpen);
+    };
 
     function handleSelected(e) {
         localStorage.setItem('@ylderlan:optionSelected', e.target.pathname);
@@ -21,7 +28,9 @@ export function Menu(){
             <Logotipo>
                 <img src={LogoImage} alt="Logo Habits" />
                 <p>Francisco Ylderlan</p>
+
             </Logotipo>
+            <MenuHamburguer />
             <Options>
                 <li>
                     <MenuOption 

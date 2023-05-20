@@ -1,54 +1,46 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Container = styled.div` 
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    width: 16vw;
-    background-color: ${({theme})=> theme.COLORS.BACKGROUND_700};
-    
-`;
-export const Logotipo = styled.div`
-    display: grid;
-    align-content: center;
-    justify-items: center;
-    height: fit-content;
-    img{
-        width: 100%;
-        object-fit: cover;
-    }
-    p{
-        width: 100%;
-        text-align: center;
-        font-weight: 500;
+export const Container = styled.div`
+    font-size: clamp(0.4rem, -0.1rem + 1vw, 1.6rem);
 
-        padding: 1rem;
-        background-color: ${({theme})=> theme.COLORS.GRAY_300};
-    }
-`;
- 
-export const Options = styled.ul`
-    margin-top: 10rem;
-
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
     width: 100%;
-
     height: fit-content;
+    padding: 1rem 0.5rem;
 
-    font-style: normal;
-    justify-items: center;
-    
-    a {
-        color: ${({theme}) => theme.COLORS.GRAY_300};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+
+    @media ${({ theme }) => theme.DEVICES.mobileS} {
     }
-    
-    li {
-        width: 100%;
+`;
+export const Logotipo = styled.div`
+    display: flex;
+    align-items: center;
+    width: 40%;
+    img {
+        width: 5rem;
+        object-fit: cover;
     }
-    font-style: normal;
-    font-weight: 500;
-    /* font-size: 1.6rem; */
-    line-height: 2.1rem;
 
+    p {
+        text-align: center;
+        font-weight: 500;
+        padding: 1rem;
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
+        word-wrap: break-word;
+    }
 
+    @media ${({ theme }) => theme.DEVICES.mobileS} {
+    }
+`;
+
+export const Options = styled.ul`
+    display: flex;
+`;
+
+export const HamburguerOptions = styled.div`
+    display: grid;
 `;

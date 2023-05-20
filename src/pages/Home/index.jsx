@@ -23,7 +23,7 @@ export function Home() {
     return (
         <Container>
             <Menu/>
-            <Main>
+            {/* <Main>
                 <Description title="Experiência">
                     <p>
                         Um apaixonado pela programação e em ajudar e contribuir
@@ -77,7 +77,7 @@ export function Home() {
                     </Tools>
                     
                 </Content>
-            </Main>
+            </Main> */}
         </Container>
     );
 }

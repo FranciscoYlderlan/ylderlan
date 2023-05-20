@@ -1,5 +1,4 @@
-import { createGlobalStyle } from "styled-components";
-
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     *{
@@ -21,12 +20,13 @@ export default createGlobalStyle`
     input,
     button,
     textarea {
-        font-size: 1.6rem;
+        font-size: 1.6rem;//clamp(.4rem,-0.1rem + 1vw, 1.6rem)
+        
         font-family: 'Poppins', sans-serif;
     
     }
     body{
-        background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     }
     
     body,
@@ -34,7 +34,7 @@ export default createGlobalStyle`
     button,
     textarea {
         
-        font-size: clamp(.4rem,-0.1rem + 1vw, 1.6rem);
+        font-size: 1.6rem;
         font-family: 'Poppins', sans-serif;
     
     }
