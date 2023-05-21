@@ -53,7 +53,7 @@ export function Contact() {
     return (
         <Container>
             <Menu/>
-            <Main>
+            {/* <Main>
                 <Description title="Minhas redes sociais">
                     <p>
                         No momento estou disponível para novos trabalhos
@@ -107,7 +107,7 @@ export function Contact() {
                         <Button type="submit" value="Send" title="Enviar"/>
                     </Form>
                 </Content>
-            </Main>
+            </Main> */}
         </Container>
     );
 }

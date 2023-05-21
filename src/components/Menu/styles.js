@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    font-size: clamp(0.4rem, -0.1rem + 1vw, 1.6rem);
+    font-size: 1.2rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+
+    grid-template-rows: 7rem auto;
+
+    align-content: center;
 
     width: 100%;
     height: fit-content;
@@ -16,31 +18,34 @@ export const Container = styled.div`
     @media ${({ theme }) => theme.DEVICES.mobileS} {
     }
 `;
+
 export const Logotipo = styled.div`
     display: flex;
     align-items: center;
-    width: 40%;
+    justify-content: space-around;
+
     img {
-        width: 5rem;
+        width: 4rem;
         object-fit: cover;
     }
 
-    p {
+    span {
         text-align: center;
         font-weight: 500;
-        padding: 1rem;
-        color: ${({ theme }) => theme.COLORS.GRAY_300};
-        word-wrap: break-word;
-    }
 
-    @media ${({ theme }) => theme.DEVICES.mobileS} {
+        padding: 0.7em 1.4em;
+        border: none;
+        border-radius: 0.5em;
+
+        background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+        box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
     }
 `;
 
 export const Options = styled.ul`
-    display: flex;
-`;
-
-export const HamburguerOptions = styled.div`
     display: grid;
+
+    &.is-active {
+        display: grid;
+    }
 `;

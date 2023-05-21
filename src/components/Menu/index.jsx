@@ -1,37 +1,43 @@
-import { Container, Logotipo ,Options } from "./styles";
+import { Container, Logotipo, Options } from "./styles";
 import LogoImage from "../../assets/logo.svg";
 import { MenuOption } from "../MenuOption";
 import { MenuHamburguer } from "../MenuHamburguer";
-import { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom'
 
+import { useState, useRef, useEffect } from 'react';
+
+import { useLocation } from 'react-router-dom'
 
 export function Menu(){
     
     const location = useLocation();
 
     const [selected, setSelected] = useState(location.pathname);
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
-
-    function handleSelected(e) {
-        localStorage.setItem('@ylderlan:optionSelected', e.target.pathname);
-        setSelected(e.target.pathname);
+    
+    const[isOpen, setIsOpen] = useState(false);
+    
+    const[counter, setCounter] = useState(0);
+    
+        
+    function handleHamburgerClick() {
+        setCounter(counter + 1);
+        if(counter%2 == 0) {
+            localStorage.setItem('@ylderlan:isActive',!isOpen)
+            setIsOpen(!isOpen);
+        }
     }
+
+
 
     return (
         <Container>
             <Logotipo>
                 <img src={LogoImage} alt="Logo Habits" />
-                <p>Francisco Ylderlan</p>
-
+                <span>Francisco Ylderlan</span>
+                <MenuHamburguer onClick={handleHamburgerClick}/>
+ 
             </Logotipo>
-            <MenuHamburguer />
-            <Options>
+            {isOpen && 
+                <Options>
                 <li>
                     <MenuOption 
                         title="home"
@@ -59,7 +65,9 @@ export function Menu(){
                         active = {selected == '/contact'}
                     />
                 </li>
-            </Options>
+                </Options>
+            }
         </Container>
     );
 };
+

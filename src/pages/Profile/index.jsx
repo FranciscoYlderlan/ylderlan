@@ -58,7 +58,7 @@ export function Profile() {
     return (
         <Container>
             <Menu/>
-            <Main>
+            {/* <Main>
                 <Description title="Produções">
                     <p>
                         Os projetos aqui demonstrados, em sua maioria, foram 
@@ -73,9 +73,7 @@ export function Profile() {
                         utilizo a ferramenta de gerenciamento de ambiente 
                         <strong> NodeJS </strong> para configuração 
                         instalação de pacotes. 
-                        {/* Para manipulação do banco de dados geralmente uso
-                        <strong> Knex</strong> como query builder ou mesmo 
-                        <strong> Prisma</strong> como ORM. */}
+
                     </p>
                 </Description>
                 <Content title="Projetos Pessoais">
@@ -113,18 +111,9 @@ export function Profile() {
                     </Tags>
 
                     <Viewer filter={option}/>
-                    
-                    {/* <p>
-                        Meus projetos públicos concluídos ou em 
-                        desenvolvimento acessados diretamente do meu repositório 
-                        do Github.
-                    </p>
-                    
-                    <Viewer filter={option}/>
-
-                     */}
+            
                 </Content>
-            </Main>
+            </Main> */}
         </Container>
     );
 }

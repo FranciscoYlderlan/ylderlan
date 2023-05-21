@@ -12,10 +12,10 @@ import { Analytics } from '@vercel/analytics/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-    <GlobalStyle/>
-      <Routes/>
-    </ThemeProvider>
-    <Analytics/>
+      <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+        <Routes/>
+      </ThemeProvider>
+      <Analytics/>
   </React.StrictMode>,
 )
