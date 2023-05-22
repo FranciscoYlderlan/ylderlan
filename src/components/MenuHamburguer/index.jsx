@@ -7,9 +7,7 @@ export function MenuHamburguer({isOpen, setIsOpen,...rest}) {
     const[isActive, setIsActive] = useState(false);
         
     useEffect(() => {
-        // JSON.parse(localStorage.getItem('@ylderlan:isActive'))
         setIsActive(isOpen);
-        console.log('atualizei queridinho', isOpen)
     },[isOpen])
 
     return (
