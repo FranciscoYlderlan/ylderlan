@@ -16,10 +16,11 @@ export function Menu(){
     const[isOpen, setIsOpen] = useState(false);
     
     const[counter, setCounter] = useState(0);
+
+    const[windowWidth, setWindowWidth] = useState(window.innerWidth);
     
     
     function handleSelected(e) {
-        // e.preventDefault();
         localStorage.setItem('@ylderlan:optionSelected', e.target.pathname);
         setSelected(e.target.pathname);
     }
@@ -34,47 +35,59 @@ export function Menu(){
         }
     }
 
+    function checkedOnchangeWindowSize() {
+        const width = window.innerWidth;
+        setWindowWidth(width);
+    }
+
+    window.addEventListener('resize', checkedOnchangeWindowSize);
+
     useEffect(() => {
         setIsOpen(JSON.parse(localStorage.getItem('@ylderlan:isActive')));
     },[])
 
+    
     return (
         <Container>
             <Logotipo>
                 <img src={LogoImage} alt="Logo Habits" />
                 <span>Francisco Ylderlan</span>
-                <MenuHamburguer onClick={handleHamburgerClick} isOpen={isOpen} setIsOpen={setIsOpen}/>
+                {
+                    (windowWidth < 1024) &&
+                    <MenuHamburguer onClick={handleHamburgerClick} isOpen={isOpen} setIsOpen={setIsOpen}/>
+ 
+                }
  
             </Logotipo>
-            {isOpen && 
+            {(isOpen || (windowWidth >= 1024) ) && 
                 <Options>
-                <li>
-                    <MenuOption 
-                        title="home"
-                        pathname='/'
-                        to="/" 
-                        onClick={(e) => handleSelected(e)}
-                        active = {selected == '/'}
-                    />
-                </li>
-                <li>
-                    <MenuOption 
-                        title="profile"
-                        pathname="/profile" 
-                        to="/profile"
-                        onClick={(e) => handleSelected(e)}
-                        active = {selected == '/profile'}
-                    />
-                </li>
-                <li>
-                    <MenuOption 
-                        title="contactMe" 
-                        pathname="/contact"
-                        to="/contact"
-                        onClick={(e) => handleSelected(e)}
-                        active = {selected == '/contact'}
-                    />
-                </li>
+                    <li>
+                        <MenuOption 
+                            title="home"
+                            pathname='/'
+                            to="/" 
+                            onClick={(e) => handleSelected(e)}
+                            active = {selected == '/'}
+                        />
+                    </li>
+                    <li>
+                        <MenuOption 
+                            title="profile"
+                            pathname="/profile" 
+                            to="/profile"
+                            onClick={(e) => handleSelected(e)}
+                            active = {selected == '/profile'}
+                        />
+                    </li>
+                    <li>
+                        <MenuOption 
+                            title="contactMe" 
+                            pathname="/contact"
+                            to="/contact"
+                            onClick={(e) => handleSelected(e)}
+                            active = {selected == '/contact'}
+                        />
+                    </li>
                 </Options>
             }
         </Container>

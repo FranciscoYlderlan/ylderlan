@@ -30,11 +30,14 @@ const animationOpen3 = keyframes`
     }
 `;
 
-const animationClosed = keyframes`
-    
+export const Container = styled.button`
+    display: flex;
+    transform: scale(0.8);
+    background-color: transparent;
+    border: none;
 `;
 
-export const Container = styled.button`
+export const Open = styled.div`
     display: flex;
     transform: scale(0.8);
     background-color: transparent;
@@ -87,7 +90,7 @@ export const Closed = styled.div`
         min-height: 4rem;
         display: block;
         cursor: pointer;
-        transform: rotate(0deg) !important;
+        animation: ${animationOpen} 0.6s ease-in reverse !important;
     }
 
     label div {
@@ -113,13 +116,8 @@ export const Closed = styled.div`
     }
 `;
 
-export const Open = styled.button`
-    display: flex;
-    transform: scale(0.8);
-    background-color: transparent;
-    border: none;
-`;
-
 export const Options = styled.ul`
     display: grid;
 `;
+
+
