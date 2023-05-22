@@ -43,7 +43,7 @@ export function Menu(){
             <Logotipo>
                 <img src={LogoImage} alt="Logo Habits" />
                 <span>Francisco Ylderlan</span>
-                <MenuHamburguer onClick={handleHamburgerClick}/>
+                <MenuHamburguer onClick={handleHamburgerClick} isOpen={isOpen} setIsOpen={setIsOpen}/>
  
             </Logotipo>
             {isOpen && 
