@@ -54,7 +54,7 @@ export const Container = styled.button`
     .open-2 {
         border-top-right-radius: 5rem;
         border-bottom-right-radius: 5rem;
-        /* width: 5.1rem; */
+
         margin-left: 0;
     }
 

@@ -17,16 +17,26 @@ export function Menu(){
     
     const[counter, setCounter] = useState(0);
     
-        
+    
+    function handleSelected(e) {
+        // e.preventDefault();
+        localStorage.setItem('@ylderlan:optionSelected', e.target.pathname);
+        setSelected(e.target.pathname);
+    }
+    
+
     function handleHamburgerClick() {
         setCounter(counter + 1);
         if(counter%2 == 0) {
             localStorage.setItem('@ylderlan:isActive',!isOpen)
             setIsOpen(!isOpen);
+            
         }
     }
 
-
+    useEffect(() => {
+        setIsOpen(JSON.parse(localStorage.getItem('@ylderlan:isActive')));
+    },[])
 
     return (
         <Container>

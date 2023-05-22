@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rollout = keyframes`
+    0% {
+        opacity: 0;
+        transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 export const Container = styled.div`
     font-size: 1.2rem;
@@ -44,8 +55,5 @@ export const Logotipo = styled.div`
 
 export const Options = styled.ul`
     display: grid;
-
-    &.is-active {
-        display: grid;
-    }
+    /* animation: 0.7s ${rollout} ease-in-out; */
 `;
