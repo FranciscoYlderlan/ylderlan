@@ -30,7 +30,9 @@ export const Container = styled(motion.main)`
     }
 
     @media ${({ theme }) => theme.DEVICES.laptop} {
-        bottom: 5%;
-        height: 88vh;
+        &::before {
+            bottom: 5%;
+            height: 88vh;
+        }
     }
 `;
