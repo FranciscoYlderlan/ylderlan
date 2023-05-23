@@ -26,7 +26,7 @@ export default createGlobalStyle`
     
     }
     body{
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+        background: linear-gradient(90deg, rgba(35,40,43,1) 30%, rgba(19,22,28,1) 100%);
     }
     
     body,
