@@ -58,6 +58,25 @@ export function Profile() {
     return (
         <Container>
             <Menu/>
+            <Main>
+                <Description title="Produções">
+                    <p>
+                        Os projetos aqui demonstrados, em sua maioria, foram 
+                        desenvolvidos utilizando <strong>Javascript</strong> e 
+                        <strong> Typescript</strong>. Em <strong>front-ends</strong>, 
+                        também utilizo da biblioteca <strong>React</strong> e/ou 
+                        <strong> React Native</strong>, além de variadas <strong>API's </strong> 
+                        e <strong>bibliotecas</strong>, dependendo do escopo de cada projeto.
+                    </p>
+                    <p>
+                        No desenvolvimento de <strong>back-ends </strong> 
+                        utilizo a ferramenta de gerenciamento de ambiente 
+                        <strong> NodeJS </strong> para configuração 
+                        instalação de pacotes. 
+
+                    </p>
+                </Description>
+            </Main>
             {/* <Main>
                 <Description title="Produções">
                     <p>

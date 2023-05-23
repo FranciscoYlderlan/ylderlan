@@ -1,20 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-rows: 10rem auto;
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
 
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        display: flex;
+    }
 `;
 
-
 export const Tags = styled.div`
-    
     display: flex;
     gap: 2rem;
     height: fit-content;
     margin: 1.6rem 0;
     align-items: flex-end;
-    
-    
 `;

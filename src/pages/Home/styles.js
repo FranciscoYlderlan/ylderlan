@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-rows: 10rem auto;
     width: 100vw;
     height: 100vh;
+
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        display: flex;
+    }
 `;
 
 export const Tools = styled.div`

@@ -25,16 +25,9 @@ import {
 
 
 export function Contact() {
-    // const standardMail = {
-    //     from_name: '',
-    //     email: '',
-    //     message:'',
-    // }
+
     const form = useRef();
 
-    // const [mail, setMail] = useState(standardMail);      
-    // const handleChange = e => setMail({ ...mail, [e.target.name]: e.target.value });
-    
     function sendEmail (e) {
         e.preventDefault();
     
@@ -53,6 +46,32 @@ export function Contact() {
     return (
         <Container>
             <Menu/>
+            <Main>
+                <Description title="Minhas redes sociais">
+                    <p>
+                        No momento estou disponível para novos trabalhos
+                        entre em contato comigo. Vamos marcar uma reunião!
+                    </p>
+                    <ListLinks>
+                        <li>
+                            <TextLink 
+                                title={'Linkedin'} 
+                                href="https://www.linkedin.com/in/franciscoylderlanoliveira/" 
+                                target='_blank'
+                                icon={BsLinkedin}
+                            />
+                        </li>
+                        <li>
+                            <TextLink 
+                                title={'Github'} 
+                                href="https://github.com/FranciscoYlderlan" 
+                                target='_blank'
+                                icon={BsGithub}
+                            />
+                        </li>
+                    </ListLinks>
+                </Description>
+            </Main>
             {/* <Main>
                 <Description title="Minhas redes sociais">
                     <p>

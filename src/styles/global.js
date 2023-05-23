@@ -26,7 +26,8 @@ export default createGlobalStyle`
     
     }
     body{
-        background: linear-gradient(90deg, rgba(35,40,43,1) 30%, rgba(19,22,28,1) 100%);
+        background: linear-gradient(180deg, rgba(35,40,43,1) 30%, rgba(19,22,28,1) 100%);
+
     }
     
     body,
@@ -40,36 +41,10 @@ export default createGlobalStyle`
     }
 
 
-    /* @media (min-width: 1200px) { 
-        body,input, button {
-            font-size: 1.2rem;
-        };
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+       body {
+            background: linear-gradient(90deg, rgba(35,40,43,1) 30%, rgba(19,22,28,1) 100%);
+       }
     }
-
-
-    @media (min-width: 1400px) { 
-        body,input, button {
-            font-size: 1.4rem;
-        };
-    }
-
-
-    @media (min-width: 1600px) { 
-        body,input, button {
-            font-size: 1.6rem;
-        };
-    }
-
-    @media (min-width: 2000px) { 
-        body,input, button {
-            font-size: 2rem;
-        };
-    }
-
-    @media (min-width: 2600px) { 
-        body,input, button {
-            font-size: 2.4rem;
-        };
-    } */
 
 `;

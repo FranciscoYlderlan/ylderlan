@@ -23,6 +23,19 @@ export function Home() {
     return (
         <Container>
             <Menu/>
+            <Main>
+                <Description title="Experiência">
+                    <p>
+                        Um apaixonado pela programação e em ajudar e contribuir
+                        com meus conhecimentos. Desenvolvo aplicações
+                        <strong> front-end</strong> e <strong> back-end</strong>. 
+                        Aspiro diariamente conhecer, utilizar e aprender sobre 
+                        novas ferramentas que surgem na comunidade buscando
+                        sempre evoluir e aprimorar meus conhecimentos sobre essa 
+                        vasta área da programação.
+                    </p>
+                </Description>
+            </Main>
             {/* <Main>
                 <Description title="Experiência">
                     <p>
