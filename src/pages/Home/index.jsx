@@ -35,19 +35,6 @@ export function Home() {
                         vasta área da programação.
                     </p>
                 </Description>
-            </Main>
-            {/* <Main>
-                <Description title="Experiência">
-                    <p>
-                        Um apaixonado pela programação e em ajudar e contribuir
-                        com meus conhecimentos. Desenvolvo aplicações
-                        <strong> front-end</strong> e <strong> back-end</strong>. 
-                        Aspiro diariamente conhecer, utilizar e aprender sobre 
-                        novas ferramentas que surgem na comunidade buscando
-                        sempre evoluir e aprimorar meus conhecimentos sobre essa 
-                        vasta área da programação.
-                    </p>
-                </Description>
                 <Content title="Principais Tecnologias">
                     <p>
                         Segue algumas bibliotecas, frameworks, linguagens e ferramentas 
@@ -88,9 +75,8 @@ export function Home() {
                             href="https://jestjs.io/pt-BR/"
                         />
                     </Tools>
-                    
                 </Content>
-            </Main> */}
+            </Main>
         </Container>
     );
 }

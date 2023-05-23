@@ -71,32 +71,6 @@ export function Contact() {
                         </li>
                     </ListLinks>
                 </Description>
-            </Main>
-            {/* <Main>
-                <Description title="Minhas redes sociais">
-                    <p>
-                        No momento estou disponível para novos trabalhos
-                        entre em contato comigo. Vamos marcar uma reunião!
-                    </p>
-                    <ListLinks>
-                        <li>
-                            <TextLink 
-                                title={'Linkedin'} 
-                                href="https://www.linkedin.com/in/franciscoylderlanoliveira/" 
-                                target='_blank'
-                                icon={BsLinkedin}
-                            />
-                        </li>
-                        <li>
-                            <TextLink 
-                                title={'Github'} 
-                                href="https://github.com/FranciscoYlderlan" 
-                                target='_blank'
-                                icon={BsGithub}
-                            />
-                        </li>
-                    </ListLinks>
-                </Description>
                 <Content title="Fale comigo">
                     <Form ref={form} onSubmit={sendEmail}>
                         <Inputs>
@@ -126,7 +100,7 @@ export function Contact() {
                         <Button type="submit" value="Send" title="Enviar"/>
                     </Form>
                 </Content>
-            </Main> */}
+            </Main>
         </Container>
     );
 }
