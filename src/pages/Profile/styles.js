@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Tags = styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     height: fit-content;
     margin: 1.6rem 0;
