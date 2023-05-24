@@ -40,7 +40,8 @@ export function Home() {
                         Segue algumas bibliotecas, frameworks, linguagens e ferramentas 
                         cuja as quais já tive contato e pude desenvolver alguma aplicação.
                     </p>
-                    <Tools>
+                    <Tools></Tools>
+                    {/* <Tools>
                         <IconLink size={60} title="Html5" icon={AiFillHtml5}
                             href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
                         />
@@ -74,7 +75,7 @@ export function Home() {
                         <IconLink size={50} title="Jest" icon={SiJest}
                             href="https://jestjs.io/pt-BR/"
                         />
-                    </Tools>
+                    </Tools> */}
                 </Content>
             </Main>
         </Container>

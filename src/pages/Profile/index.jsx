@@ -82,7 +82,7 @@ export function Profile() {
                         desenvolvimento acessados diretamente do meu repositório 
                         do Github.
                     </p>   
-                    <Tags>
+                    {/* <Tags>
                         <Tag 
                             isActive={option.includes('all')}
                             title='Todos' 
@@ -110,7 +110,7 @@ export function Profile() {
                         />
                     </Tags>
 
-                    <Viewer filter={option}/>
+                    <Viewer filter={option}/> */}
             
                 </Content>
             </Main>
