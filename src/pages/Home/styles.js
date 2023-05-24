@@ -15,16 +15,19 @@ export const Tools = styled.div`
     display: grid;
 
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+
     gap: 2rem;
 
     align-content: start;
 
-    height: 85%;
-
     margin-top: 2rem;
-    padding: 1rem 0rem;
+    padding: 3rem 0rem;
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 20px inset, rgba(0, 0, 0, 0.3) 0px 7px 13px 0px inset,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px;
+
     border-radius: 0.4rem;
 
     overflow-y: overlay;
@@ -40,5 +43,10 @@ export const Tools = styled.div`
         border: 0.4rem transparent solid;
         border-radius: 3.2rem;
         background-clip: padding-box;
+    }
+
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        padding: 2rem 0rem;
+        max-height: 27rem;
     }
 `;

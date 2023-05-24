@@ -15,6 +15,8 @@ export default createGlobalStyle`
     }
     :root {
         font-size: 62.5%;
+        width: 100vw;
+        height: 100vh;
     }
     body,
     input,
@@ -26,6 +28,7 @@ export default createGlobalStyle`
     
     }
     body{
+
         background: linear-gradient(180deg, rgba(35,40,43,1) 30%, rgba(19,22,28,1) 100%);
 
     }

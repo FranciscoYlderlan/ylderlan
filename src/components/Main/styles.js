@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.main)`
+    display: grid;
+
+    align-items: stretch;
+    gap: 5rem;
     width: 100%;
-    position: relative;
 
     &::before {
         position: absolute;
@@ -30,6 +33,7 @@ export const Container = styled(motion.main)`
     }
 
     @media ${({ theme }) => theme.DEVICES.laptop} {
+        position: relative;
         &::before {
             bottom: 5%;
             height: 88vh;

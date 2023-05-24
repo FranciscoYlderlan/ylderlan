@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
-    position: fixed;
-
     height: fit-content;
     width: fit-content;
 
@@ -34,10 +32,13 @@ export const Container = styled(motion.div)`
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
     @media ${({ theme }) => theme.DEVICES.laptop} {
-        max-height: 70vh;
+        font-size: clamp(1rem, -0.9692rem + 1.9231vw, 1.6rem);
+
+        position: absolute;
+        height: fit-content;
         width: 50%;
-        right: 15rem;
-        bottom: 10rem;
+        left: 43%;
+        bottom: 10%;
     }
 `;
 
