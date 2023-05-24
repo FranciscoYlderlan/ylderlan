@@ -47,6 +47,6 @@ export const Tools = styled.div`
 
     @media ${({ theme }) => theme.DEVICES.laptop} {
         padding: 2rem 0rem;
-        max-height: 27rem;
+        height: clamp(27rem, -60.5385rem + 60.9vw, 50rem);
     }
 `;
