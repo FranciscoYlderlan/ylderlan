@@ -109,9 +109,8 @@ export function Profile() {
                             onClick={() => handleSelectionOptions('code')}
                         />
                     </Tags>   
-                    {/* 
 
-                    <Viewer filter={option}/> */}
+                    <Viewer filter={option}/>
             
                 </Content>
             </Main>

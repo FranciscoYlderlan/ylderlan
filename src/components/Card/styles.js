@@ -25,6 +25,14 @@ export const Tags = styled.div`
     font-weight: 400;
     font-size: clamp(0.3, -0.3rem + 1vw, 1.4rem);
     line-height: 1.6rem;
+
+    span {
+        background: ${({ theme }) => theme.COLORS.WHITE} !important;
+        border: ${({ theme }) => theme.COLORS.WHITE} !important;
+    }
+    span::after {
+        display: none;
+    }
 `;
 
 export const View = styled.div`
