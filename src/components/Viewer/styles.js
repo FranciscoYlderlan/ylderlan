@@ -26,14 +26,7 @@ export const Container = styled.div`
         background-clip: padding-box;
     }
 
-    /*     
-    &::-webkit-scrollbar {
-        width: 1rem;
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        height: 25rem;
     }
-    
-    &::-webkit-scrollbar-thumb {
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-        border-radius: 3.2rem;
-    } 
-*/
 `;

@@ -1,10 +1,25 @@
 import { useState } from 'react';
-import { Container, View, Tags } from "./styles";
+import { Container, View, Tags, AcessLink } from "./styles";
 import { CardHover } from '../CardHover';
 import { Tag } from '../Tag';
 import { tagsTitleGenerator } from '../../providers/utils';
+import { Button } from '../Button';
+import { GithubRepos } from '../../services/Github.service';
+import { BsArrowRightShort } from 'react-icons/bs';
+
 export function Card({src, uploaded=false ,project, ...rest }) {
     const [isShown, setIsShown] = useState(false);
+
+    const [url, setUrl] = useState(GithubRepos.getPageURL(project))
+
+    const[windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    function checkedOnchangeWindowSize() {
+        const width = window.innerWidth;
+        setWindowWidth(width);
+    }
+
+    window.addEventListener('resize', checkedOnchangeWindowSize);
 
     const tagsTitles = tagsTitleGenerator({
         description: project.description,
@@ -45,6 +60,14 @@ export function Card({src, uploaded=false ,project, ...rest }) {
                             })
                         }
                     </Tags>
+                    {
+                        
+                        (windowWidth < 1024 && isShown) &&
+                        <AcessLink href={url} target='_blank'>
+                            <Button title={'Veja mais'} icon={BsArrowRightShort}/>
+                        </AcessLink>
+                    }
+                    
                 </View>
             </CardHover>
         </Container>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { BsArrowRightShort } from 'react-icons/bs';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import { Tag } from '../Tag';
 import { Button } from '../Button';
@@ -21,6 +21,14 @@ export function CardHover({children, project, src,...rest }) {
     
     const [url, setUrl] = useState(GithubRepos.getPageURL(project))
 
+    const[windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    function checkedOnchangeWindowSize() {
+        const width = window.innerWidth;
+        setWindowWidth(width);
+    }
+
+    window.addEventListener('resize', checkedOnchangeWindowSize);
     
     const tagsTitles = tagsTitleGenerator({
         description: project.description,
@@ -28,6 +36,7 @@ export function CardHover({children, project, src,...rest }) {
     });
     
     return (
+        (windowWidth >= 1024) ?
         <HoverCard.Root className="Card">
         <HoverCard.Trigger asChild>
             {children}
@@ -62,7 +71,7 @@ export function CardHover({children, project, src,...rest }) {
                             }
                         </Tags>
                         <AcessLink href={url} target='_blank'>
-                            <Button title={'Veja mais'} icon={AiOutlineArrowRight}/>
+                            <Button title={'Veja mais'} icon={BsArrowRightShort}/>
                         </AcessLink>
                     </HoverCardContent>
                 </HoverCard.Content>
@@ -70,5 +79,9 @@ export function CardHover({children, project, src,...rest }) {
             
         </HoverCard.Portal>
     </HoverCard.Root>
+    :
+    <>
+        {children}
+    </>
     );
 }

@@ -1,6 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { motion } from 'framer-motion';
+
+const animationInLeft = keyframes`
+  0% {
+
+    transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+`;
 
 export const Container = styled(motion.div)`
     position: relative;
@@ -40,7 +55,7 @@ export const View = styled.div`
 
     width: 100%;
     height: 100%;
-    min-height: 30rem;
+    min-height: 25rem;
     max-height: fit-content;
 
     border-radius: 0.4rem;
@@ -77,6 +92,7 @@ export const View = styled.div`
 
     > h2 {
         position: absolute;
+        font-size: clamp(1rem, 0.7273rem + 0.8523vw, 1.6rem);
         top: 0%;
         right: 4%;
         z-index: 99999;
@@ -86,7 +102,8 @@ export const View = styled.div`
 
     &:hover h2 {
         top: 40%;
-        right: 40%;
+        right: 50%;
+        transform: translateX(50%);
     }
 
     font-style: normal;
@@ -102,5 +119,48 @@ export const View = styled.div`
         > h2 {
             top: 3%;
         }
+    }
+`;
+
+export const AcessLink = styled.a`
+    position: absolute;
+
+    animation: ${animationInLeft} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    > button {
+        font-size: 1rem;
+        padding: 1rem;
+        background-color: transparent;
+        svg {
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+        }
+        &:hover svg {
+            transform: translateX(0);
+        }
+    }
+
+    button:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 5rem;
+        background-color: ${({ theme }) => theme.COLORS.WHITE};
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+    button:hover:before {
+        border-radius: 1rem;
+        width: 100%;
+        background: ${({ theme }) => theme.COLORS.WHITE};
+    }
+    bottom: 1rem;
+    z-index: 99999;
+    &:hover {
+        cursor: pointer;
     }
 `;
