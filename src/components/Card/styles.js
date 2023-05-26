@@ -4,13 +4,12 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
     width: 100%;
-    height: 25rem;
+    min-height: 30rem;
     position: relative;
     transition: filter 0.6s;
 
     &:hover {
         cursor: pointer;
-        filter: brightness(0.5);
     }
 `;
 
@@ -36,22 +35,59 @@ export const Tags = styled.div`
 `;
 
 export const View = styled.div`
+    display: grid;
+    gap: 1.4rem;
+
+    justify-items: center;
+    align-items: center;
+
     width: 100%;
     height: 100%;
     border-radius: 0.4rem;
+    padding: 0.3rem;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 30%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: ${({ theme, uploaded }) => (uploaded ? theme.COLORS.WHITE : 'black')};
+        background-color: ${({ theme, uploaded }) =>
+            uploaded ? theme.COLORS.GREEN : theme.COLORS.DARK_YELLOW};
+        filter: brightness(1.2);
+        z-index: 9999;
+        transition: all 0.5s;
+    }
 
-    display: grid;
-    gap: 1.4rem;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
+    &::after {
+        top: 0;
+        right: 0;
+        border-radius: 0 0.4rem 0 100%;
+    }
 
-    padding: 0.5rem;
+    &:hover:after {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+        transition: all 0.5s;
+    }
 
     > h2 {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        z-index: 99999;
         align-self: flex-end;
+        transition: all 0.5s;
     }
-    > ${Tags} {
+
+    &:hover h2 {
+        top: 40%;
+        right: 40%;
     }
+
     font-style: normal;
     font-weight: 700;
     font-size: clamp(0.6rem, -0.2rem + 1vw, 2.4rem);

@@ -47,21 +47,6 @@ export function Card({src, uploaded=false ,project, ...rest }) {
                     </Tags>
                 </View>
             </CardHover>
-            {/* {isShown && (
-                <Description
-                    animate={{opacity: 1}}
-                    transition={{
-                        duration: .3,
-                        delay: 0,
-                        ease: [0.5, 0.71, 1, 1],
-                    }}
-                    initial={{ opacity: 0}}
-                    onMouseEnter={() => setIsShown(true)}
-                    onMouseLeave={() => setIsShown(false)}
-                >
-                    {desc}
-                </Description>
-            )} */}
         </Container>
     );
 }
