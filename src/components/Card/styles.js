@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
-    width: 100%;
-    min-height: 30rem;
     position: relative;
-    transition: filter 0.6s;
 
     &:hover {
         cursor: pointer;
@@ -22,7 +19,7 @@ export const Tags = styled.div`
     color: black;
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(0.3, -0.3rem + 1vw, 1.4rem);
+    font-size: clamp(0.3rem, -0.3rem + 1vw, 1.4rem);
     line-height: 1.6rem;
 
     span {
@@ -43,13 +40,17 @@ export const View = styled.div`
 
     width: 100%;
     height: 100%;
+    min-height: 30rem;
+    max-height: fit-content;
+
     border-radius: 0.4rem;
-    padding: 0.3rem;
+    padding: 5rem 0.3rem 0;
+
     &::after {
         position: absolute;
         content: '';
-        width: 30%;
-        height: 30%;
+        width: clamp(4rem, 2.6364rem + 4.2614vw, 7rem);
+        height: clamp(4rem, 2.6364rem + 4.2614vw, 7rem);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -76,8 +77,8 @@ export const View = styled.div`
 
     > h2 {
         position: absolute;
-        top: 5%;
-        right: 5%;
+        top: 0%;
+        right: 4%;
         z-index: 99999;
         align-self: flex-end;
         transition: all 0.5s;
@@ -96,4 +97,10 @@ export const View = styled.div`
     background-color: ${({ theme, uploaded }) =>
         uploaded ? theme.COLORS.GREEN : theme.COLORS.DARK_YELLOW};
     color: ${({ theme, uploaded }) => (uploaded ? theme.COLORS.WHITE : 'black')};
+
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        > h2 {
+            top: 3%;
+        }
+    }
 `;

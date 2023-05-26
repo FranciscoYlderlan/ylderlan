@@ -14,8 +14,11 @@ export const Container = styled.div`
 export const Tags = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: clamp(1rem, 0.7727rem + 0.7102vw, 1.5rem);
     height: fit-content;
     margin: 1.6rem 0;
     align-items: flex-end;
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        gap: 2rem;
+    }
 `;

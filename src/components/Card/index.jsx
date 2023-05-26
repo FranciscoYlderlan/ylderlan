@@ -22,7 +22,7 @@ export function Card({src, uploaded=false ,project, ...rest }) {
                     onMouseLeave={() => setIsShown(false)}
                 >
                     {
-                        uploaded ? <h2>Web</h2> : <h2>Code</h2>
+                        uploaded ? <h2>Page</h2> : <h2>Code</h2>
                     }
                     <Tags>
                         {

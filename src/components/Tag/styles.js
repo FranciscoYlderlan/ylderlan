@@ -16,7 +16,7 @@ const scaleUp = keyframes`
 `;
 
 export const Container = styled(motion.span)`
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 0.8182rem + 0.5682vw, 1.4rem);
     position: relative;
     display: flex;
 
@@ -28,7 +28,7 @@ export const Container = styled(motion.span)`
 
     width: fit-content;
     height: fit-content;
-    padding: 0.8rem 1.4rem;
+    padding: clamp(0.4rem, 0.2182rem + 0.5682vw, 0.8rem) clamp(0.7rem, 0.2182rem + 0.5682vw, 1.4rem);
 
     border: 0.25rem solid ${({ theme, isActive }) => (isActive ? 'none' : theme.COLORS.YELLOW)}
         inset;
