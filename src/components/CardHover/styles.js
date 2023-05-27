@@ -66,7 +66,7 @@ export const Description = styled.div`
 export const AcessLink = styled.a`
     > button {
         font-size: 1.2rem;
-        margin: 0 2rem;
+        padding: 1.5rem;
     }
 
     justify-self: center;

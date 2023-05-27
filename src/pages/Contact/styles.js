@@ -21,9 +21,9 @@ export const Form = styled.form`
     align-content: space-between;
 
     margin-top: 1rem;
-    padding-right: 0.5rem;
 
     height: 100%;
+    width: 80vw;
 
     overflow-y: auto;
 
@@ -37,6 +37,10 @@ export const Form = styled.form`
         border: 0.4rem transparent solid;
         border-radius: 3.2rem;
         background-clip: padding-box;
+    }
+
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        width: 100%;
     }
 `;
 

@@ -131,6 +131,8 @@ export const AcessLink = styled.a`
         font-size: 1rem;
         padding: 1rem;
         background-color: transparent;
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        border: none;
         svg {
             transform: translateX(-5px);
             transition: all 0.3s ease;
@@ -138,6 +140,14 @@ export const AcessLink = styled.a`
         &:hover svg {
             transform: translateX(0);
         }
+        &:hover {
+            color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+            background-color: transparent;
+            border: none;
+        }
+    }
+    button:after {
+        content: none;
     }
 
     button:before {
