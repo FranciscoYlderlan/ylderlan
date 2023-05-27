@@ -17,6 +17,12 @@ export default createGlobalStyle`
         font-size: 62.5%;
         width: 100vw;
         height: 100vh;
+
+        --toastify-color-light:${({ theme }) => theme.COLORS.GRAY_300};
+        --toastify-color-dark: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        --toastify-color-success: ${({ theme }) => theme.COLORS.GREEN};
+        --toastify-color-error: ${({ theme }) => theme.COLORS.RED};
+        
     }
     body,
     input,

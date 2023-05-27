@@ -11,6 +11,9 @@ import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
 import { TextLink } from "../../components/TextLink";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import emailjs from '@emailjs/browser';
 
 
@@ -24,19 +27,35 @@ import {
         } from "react-icons/bs"
 
 
+const toastConfig = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+};
+
 export function Contact() {
 
     const form = useRef();
 
+
+
+
     function sendEmail (e) {
         e.preventDefault();
     
-        emailjs.sendForm('email_profile', 'template_rhk9ith', form.current, 'UetXQQtxVgOnjK8_2')
+        toast.promise(emailjs.sendForm('email_profile', 'template_rhk9ith', form.current, 'UetXQQtxVgOnjK8_2'),        {
+            pending: 'Por favor aguarde...',
+            success: 'Obrigado por entrar em contato!',
+            error: 'Ops, ocorreu um erro ao tentar enviar email.', ...toastConfig,
+          })
             .then((result) => {
-                alert('Obrigado por entrar em contato!');
                 console.log(result.text);
             }, (error) => {
-                alert('Ocorreu um erro ao tentar enviar email.');
                 console.log(error.text);
             }).finally(() => {
                 e.target.reset();
@@ -46,6 +65,18 @@ export function Contact() {
     return (
         <Container>
             <Menu/>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
             <Main>
                 <Description title="Minhas redes sociais">
                     <p>
