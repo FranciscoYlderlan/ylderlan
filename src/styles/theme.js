@@ -22,7 +22,7 @@ export default {
         RED: '#D81522',
         SHADOW: '#000000B3',
 
-        GRAY_300: '#dadadb',
+        GRAY_300: '#BFCCB5',
         GRAY: '#84878d',
     },
     DEVICES: {

@@ -13,15 +13,16 @@ export const BoxInput = styled.div`
     gap: 1.6rem;
     border-radius: 1rem;
 
-    outline: 0.2rem solid ${({ theme }) => theme.COLORS.WHITE};
+    outline: 0.2rem solid ${({ theme }) => theme.COLORS.GRAY_300};
     outline-offset: -0.2rem;
 
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
 
     > label {
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
         transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
         position: absolute;
+        pointer-events: none;
         left: 10%;
     }
 
@@ -35,6 +36,10 @@ export const BoxInput = styled.div`
         width: 100%;
 
         border-radius: 1rem;
+
+        &::placeholder {
+            color: transparent;
+        }
 
         font-style: normal;
         font-weight: 400;
@@ -50,11 +55,14 @@ export const BoxInput = styled.div`
             color: ${({ theme }) => theme.COLORS.GREEN};
         }
         &:invalid:focus ~ label,
-        &:invalid:focus ~ svg {
+        &:invalid:not(:placeholder-shown) ~ label {
+            transform: translateY(-100%) scale(0.95);
+            background-color: none;
+            padding: 0 0.2em;
             color: ${({ theme }) => theme.COLORS.YELLOW};
         }
         &:valid:not(:focus) ~ label {
-            color: ${({ theme }) => theme.COLORS.WHITE};
+            color: ${({ theme }) => theme.COLORS.GRAY_300};
         }
     }
 
@@ -62,7 +70,8 @@ export const BoxInput = styled.div`
         color: ${({ theme }) => theme.COLORS.GREEN};
     }
 
-    &:has(input:invalid:focus) > svg {
+    &:has(input:invalid:focus) > svg,
+    &:has(input:invalid:not(:placeholder-shown)) > svg {
         color: ${({ theme }) => theme.COLORS.YELLOW};
     }
 
@@ -70,7 +79,8 @@ export const BoxInput = styled.div`
         outline: 0.2rem solid ${({ theme }) => theme.COLORS.GREEN};
     }
 
-    &:has(input:invalid:focus) {
+    &:has(input:invalid:focus),
+    &:has(input:invalid:not(:placeholder-shown)) {
         outline: 0.2rem solid ${({ theme }) => theme.COLORS.YELLOW};
         outline-offset: -0.2rem;
     }
