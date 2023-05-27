@@ -76,7 +76,8 @@ export function Contact() {
                         <Inputs>
                             <Input
                                 type="text"
-                                placeholder="Informe seu nome"
+                                labelPlaceholder="Nome"
+                                // placeholder="Informe seu nome"
                                 icon={BsFillPersonFill}
                                 name="from_name"
                                 errorMessage="Este campo é obrigatório."
@@ -84,14 +85,16 @@ export function Contact() {
                             />
                             <Input
                                 type="email"
-                                placeholder="Informe seu email"
+                                labelPlaceholder="Email"
+                                // placeholder="Informe seu email"
                                 icon={MdOutlineEmail}
                                 name="email"
                                 errorMessage="Informe um email válido/Este campo é obrigatório."
                                 required
                             />
                             <TextArea
-                                placeholder="Informe sua mensagem"
+                                labelPlaceholder="Mensagem"
+                                // placeholder="Informe sua mensagem"
                                 name="message"
                                 errorMessage="Este campo é obrigatório."
                                 required

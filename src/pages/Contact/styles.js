@@ -20,7 +20,7 @@ export const Form = styled.form`
     display: grid;
     align-content: space-between;
 
-    margin-top: 1rem;
+    padding-top: 1rem;
 
     height: 100%;
     width: 80vw;
