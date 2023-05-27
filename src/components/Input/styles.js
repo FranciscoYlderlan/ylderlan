@@ -23,7 +23,7 @@ export const BoxInput = styled.div`
         transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
         position: absolute;
         pointer-events: none;
-        left: 10%;
+        left: 15%;
     }
 
     > input {
@@ -94,5 +94,10 @@ export const BoxInput = styled.div`
         border-radius: 1rem;
 
         color: ${({ theme }) => theme.COLORS.YELLOW};
+    }
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        > label {
+            left: 10%;
+        }
     }
 `;

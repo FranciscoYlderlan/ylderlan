@@ -19,6 +19,7 @@ export const ListLinks = styled.ul`
 export const Form = styled.form`
     display: grid;
     align-content: space-between;
+    gap: 2rem;
 
     padding-top: 1rem;
 
@@ -46,6 +47,6 @@ export const Form = styled.form`
 
 export const Inputs = styled.div`
     display: grid;
-    gap: 2rem;
+    gap: 3.5rem;
     margin-bottom: 2rem;
 `;

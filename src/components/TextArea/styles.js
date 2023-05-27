@@ -15,16 +15,21 @@ export const Container = styled.div`
 export const BoxTextArea = styled.textarea`
     height: 15rem;
     width: 100%;
-    outline: 0.2rem solid ${({ theme }) => theme.COLORS.GRAY_300};
-    outline-offset: -0.2rem;
+    padding: 2rem;
+
     background-color: transparent;
     color: ${({ theme }) => theme.COLORS.WHITE};
+
+    font-size: clamp(1.4rem, 1.3091rem + 0.2841vw, 1.6rem);
     font-style: normal;
     font-weight: 400;
     line-height: 1.9rem;
+
     border: none;
     border-radius: 1rem;
-    padding: 2rem;
+    outline: 0.2rem solid ${({ theme }) => theme.COLORS.GRAY_300};
+    outline-offset: -0.2rem;
+
     &::placeholder {
         color: transparent;
     }
@@ -59,7 +64,7 @@ export const BoxTextArea = styled.textarea`
         outline: 0.3rem solid ${({ theme }) => theme.COLORS.YELLOW};
         outline-offset: -0.3rem;
     }
-    &:invalid:focus + div {
+    &:invalid:focus ~ div {
         display: flex;
         width: 100%;
 

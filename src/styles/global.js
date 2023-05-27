@@ -22,11 +22,12 @@ export default createGlobalStyle`
     input,
     button,
     textarea {
-        font-size: 1.6rem;//clamp(.4rem,-0.1rem + 1vw, 1.6rem)
-        
+        font-size: 1.6rem;
         font-family: 'Poppins', sans-serif;
     
     }
+
+
     body{
 
         background: linear-gradient(180deg, rgba(35,40,43,1) 30%, rgba(19,22,28,1) 100%);
