@@ -8,7 +8,7 @@ export function Input ({icon: Icon, labelPlaceholder,errorMessage,...rest}) {
         <Container>
             <BoxInput>
                 {Icon && <Icon size={20}/>}
-                <input {...rest} autocomplete="off"/>
+                <input {...rest} autoComplete="off"/>
                 <label>{labelPlaceholder}</label>
             </BoxInput>
             <Warning icon={AiFillWarning} description={errorMessage}/>

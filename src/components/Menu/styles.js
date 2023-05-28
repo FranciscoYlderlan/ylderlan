@@ -1,16 +1,15 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
-const rollout = keyframes`
-    0% {
-        opacity: 0;
-        height:0;
-        transform: translateY(-7rem);
+const rollout = keyframes`    
+  0% {
+    transform: translateZ(1);
+    opacity: 1;
   }
   100% {
-    scale: 1;
-    opacity: 1;
-    transform: translateY(0rem);
+    transform: translateZ(600px);
+    opacity: 0;
   }
+
 `;
 
 export const Container = styled.div`
@@ -18,13 +17,12 @@ export const Container = styled.div`
 
     display: grid;
 
-    grid-template-rows: 7rem auto;
+    grid-template-rows: 7rem 0;
 
     align-content: center;
 
     width: 100%;
     height: fit-content;
-    padding: 1rem 0.5rem;
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
@@ -74,12 +72,27 @@ export const Logotipo = styled.div`
     }
 `;
 
-export const Options = styled.ul`
+export const OptionsIn = styled.ul`
+    margin-top: 6.2rem;
+    display: ${({ isOpen }) => (isOpen ? 'grid' : 'none')};
+    align-content: center;
+    align-items: flex-start;
+    animation: 0.5s ${rollout} ease-out reverse;
+
+    @media ${({ theme }) => theme.DEVICES.laptop} {
+        animation: none;
+    }
+`;
+
+export const OptionsOut = styled.ul`
+    margin-top: 6.2rem;
     display: grid;
     align-content: center;
     align-items: flex-start;
 
-    animation: 0.5s ${rollout} ease-out;
+    pointer-events: none;
+
+    animation: 0.5s ${rollout} ease-out forwards;
 
     @media ${({ theme }) => theme.DEVICES.laptop} {
         animation: none;

@@ -16,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import emailjs from '@emailjs/browser';
 
-
 import { Container, Form, Inputs, ListLinks } from "./styles";
 
 import { MdOutlineEmail } from "react-icons/md"; 

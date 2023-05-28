@@ -1,4 +1,4 @@
-import { Container, Logotipo, Options } from "./styles";
+import { Container, Logotipo, OptionsIn, OptionsOut } from "./styles";
 import LogoImage from "../../assets/logo.svg";
 import { MenuOption } from "../MenuOption";
 import { MenuHamburguer } from "../MenuHamburguer";
@@ -48,19 +48,17 @@ export function Menu(){
 
     
     return (
-        <Container>
+        <Container isOpen={isOpen || (windowWidth >= 1024) }>
             <Logotipo>
                 <img src={LogoImage} alt="Logo Habits" />
                 <span>Francisco Ylderlan</span>
                 {
                     (windowWidth < 1024) &&
                     <MenuHamburguer onClick={handleHamburgerClick} isOpen={isOpen} setIsOpen={setIsOpen}/>
- 
                 }
- 
             </Logotipo>
-            {(isOpen || (windowWidth >= 1024) ) && 
-                <Options>
+            {(isOpen || (windowWidth >= 1024) ) ? 
+                <OptionsIn isOpen={isOpen || (windowWidth >= 1024) } className="options">
                     <li>
                         <MenuOption 
                             title="home"
@@ -88,7 +86,37 @@ export function Menu(){
                             active = {selected == '/contact'}
                         />
                     </li>
-                </Options>
+                </OptionsIn>
+                :
+                <OptionsOut isOpen={isOpen || (windowWidth >= 1024) }  className="options">
+                    <li>
+                        <MenuOption 
+                            title="home"
+                            pathname='/'
+                            to="/" 
+                            onClick={(e) => handleSelected(e)}
+                            active = {selected == '/'}
+                        />
+                    </li>
+                    <li>
+                        <MenuOption 
+                            title="profile"
+                            pathname="/profile" 
+                            to="/profile"
+                            onClick={(e) => handleSelected(e)}
+                            active = {selected == '/profile'}
+                        />
+                    </li>
+                    <li>
+                        <MenuOption 
+                            title="contactMe" 
+                            pathname="/contact"
+                            to="/contact"
+                            onClick={(e) => handleSelected(e)}
+                            active = {selected == '/contact'}
+                        />
+                    </li>
+                </OptionsOut>
             }
         </Container>
     );
