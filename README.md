@@ -15,17 +15,17 @@ Este é um projeto de portfólio desenvolvido utilizando React, Vite e Styled-Co
 
 ## Instalação
 
-    1. Clone este repositório:
+1. Clone este repositório:
 
 ```bash
     git clone https://github.com/franciscoylderlan/ylderlan.git
 ```
-    2. Acesse a pasta do projeto:
+2. Acesse a pasta do projeto:
 
 ```bash
     cd ylderlan
 ```
-    3. Instale as dependências do projeto:
+3. Instale as dependências do projeto:
 
 ```bash
     npm install
@@ -37,11 +37,11 @@ Antes de executar o projeto, é necessário configurar algumas informações.
 
 ### Configuração do GitHub
 
-    1. Crie um token de acesso pessoal no GitHub para acessar a API. Você pode seguir as instruções do Guia de criação de token de acesso pessoal do GitHub.
+1. Crie um token de acesso pessoal no GitHub para acessar a API. Você pode seguir as instruções do Guia de criação de token de acesso pessoal do GitHub.
 
-    2. Copie o token de acesso pessoal criado.
+2. Copie o token de acesso pessoal criado.
 
-    3. Na raiz do projeto, crie um arquivo .env.local e adicione o seguinte conteúdo:
+3. Na raiz do projeto, crie um arquivo .env.local e adicione o seguinte conteúdo:
 
 ```bash
     REACT_APP_GITHUB_TOKEN=<seu-token-de-acesso-pessoal>
@@ -52,13 +52,13 @@ Substitua <seu-token-de-acesso-pessoal> pelo token que você copiou no passo ant
 
 ### Configuração do EmailJS
 
-    1. Acesse o EmailJS e crie uma conta.
+1. Acesse o EmailJS e crie uma conta.
 
-    2. No painel de controle do EmailJS, crie um novo serviço.
+2. No painel de controle do EmailJS, crie um novo serviço.
 
-    3. Anote o Service ID e o Template ID do serviço criado.
+3. Anote o Service ID e o Template ID do serviço criado.
 
-    4. Na raiz do projeto, no arquivo .env.local, adicione as seguintes variáveis de ambiente:
+4. Na raiz do projeto, no arquivo .env.local, adicione as seguintes variáveis de ambiente:
 
 ```bash
     REACT_APP_EMAILJS_SERVICE_ID=<seu-service-id>
