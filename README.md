@@ -1,5 +1,5 @@
 
-# Título do Projeto
+# Portfólio
 
 Este é um projeto de portfólio desenvolvido utilizando React, Vite e Styled-Components. Além disso, foram utilizadas as bibliotecas React-Toastify, Framer Motion, React Icons e Radix-UI/React-Hover-Card para estilização de componentes. As APIs EmailJS e GitHub API foram consumidas para alimentar automaticamente o portfólio com os projetos públicos do GitHub, nos quais você é o criador.
 
