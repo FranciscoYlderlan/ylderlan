@@ -31,15 +31,16 @@ const dictThemes = [
   "sql",
 ];
 
-function sorted(value1, value2, type = "incre") {
-  if (type == "incre") {
-    if (value1 < value2) return 1;
-    if (value1 > value2) return -1;
+function sorted(value1, value2, type = 'incre') {
+    if (type == 'incre') {
+        if (value1 < value2) return 1;
+        if (value1 > value2) return -1;
+
+        return 0;
+    }
+    if (value1 > value2) return 1;
+    if (value1 < value2) return -1;
     return 0;
-  }
-  if (value1 > value2) return 1;
-  if (value1 < value2) return -1;
-  return 0;
 }
 
 function tagsTitleGenerator({ name, description }) {
@@ -65,12 +66,13 @@ function tagsTitleGenerator({ name, description }) {
   });
 
   return uniqueTags;
+    return uniqueTags;
 }
 
 function isUplouded(project) {
-  const { name, homepage, has_pages } = project;
-  const existHomepage = homepage && homepage !== "";
-  return has_pages || existHomepage;
+    const { name, homepage, has_pages } = project;
+    const existHomepage = homepage && homepage !== '';
+    return has_pages || existHomepage;
 }
 
 export { sorted, tagsTitleGenerator, isUplouded };

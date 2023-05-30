@@ -1,52 +1,47 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 export const Container = styled(Link)`
-    
-    position:relative;
-    
     display: flex;
-    gap: .8rem;
-    
-    color: ${({theme, active}) => active ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE} !important;
-    background: ${({theme, active}) => active ? theme.COLORS.DARK_YELLOW : theme.COLORS.BACKGROUND_700};
-    
-    border: none;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    width: 100%;
+    background: ${({ theme, active }) =>
+        active ? theme.COLORS.DARK_YELLOW : theme.COLORS.BACKGROUND_700};
+    color: ${({ theme, active }) =>
+        active ? theme.COLORS.BACKGROUND_700 : theme.COLORS.WHITE} !important;
 
-    font-style: normal;
-    font-weight: ${({active}) => active ? 700 : 500};
-    /* font-size: 1.6rem; */
-    line-height: 4.4rem;
-    
-    &::after{
-        position: absolute;        
-        content:  '${({title}) => title }';
-        
-        overflow: hidden;
-        
-        color: ${({theme}) => theme.COLORS.BACKGROUND_700};
+    border: none;
+    padding: 1rem;
 
-        text-align: center;
-        font-style: normal;
-        font-weight: 700;
-        /* font-size: 1.6rem; */
-        line-height: 4.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
 
-        background: ${({theme}) => theme.COLORS.DARK_YELLOW};
-        width: 0;
-        
-        bottom: 0%;
-        height: 100%;
-        
-        ${({active}) => active ? "transform: width;" : "transition: width .4s ease-in-out;"}
+    transform: skew(0deg);
 
-        z-index: 2;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: 0;
+        background: rgb(20, 20, 20);
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.5s;
     }
 
-    &:hover::after {
-        width: 100%;
+    &:hover {
+        cursor: pointer;
+        color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+
+    &:hover::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+        background: ${({ theme }) => theme.COLORS.DARK_YELLOW};
     }
 `;

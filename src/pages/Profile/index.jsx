@@ -73,9 +73,7 @@ export function Profile() {
                         utilizo a ferramenta de gerenciamento de ambiente 
                         <strong> NodeJS </strong> para configuração 
                         instalação de pacotes. 
-                        {/* Para manipulação do banco de dados geralmente uso
-                        <strong> Knex</strong> como query builder ou mesmo 
-                        <strong> Prisma</strong> como ORM. */}
+
                     </p>
                 </Description>
                 <Content title="Projetos Pessoais">
@@ -83,7 +81,7 @@ export function Profile() {
                         Meus projetos públicos concluídos ou em 
                         desenvolvimento acessados diretamente do meu repositório 
                         do Github.
-                    </p>   
+                    </p>
                     <Tags>
                         <Tag 
                             isActive={option.includes('all')}
@@ -110,19 +108,10 @@ export function Profile() {
                             title='Códigos' 
                             onClick={() => handleSelectionOptions('code')}
                         />
-                    </Tags>
+                    </Tags>   
 
                     <Viewer filter={option}/>
-                    
-                    {/* <p>
-                        Meus projetos públicos concluídos ou em 
-                        desenvolvimento acessados diretamente do meu repositório 
-                        do Github.
-                    </p>
-                    
-                    <Viewer filter={option}/>
-
-                     */}
+            
                 </Content>
             </Main>
         </Container>

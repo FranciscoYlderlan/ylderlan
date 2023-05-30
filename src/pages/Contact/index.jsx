@@ -11,8 +11,10 @@ import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
 import { TextLink } from "../../components/TextLink";
 
-import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+import emailjs from '@emailjs/browser';
 
 import { Container, Form, Inputs, ListLinks } from "./styles";
 
@@ -24,26 +26,35 @@ import {
         } from "react-icons/bs"
 
 
+const toastConfig = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+};
+
 export function Contact() {
-    // const standardMail = {
-    //     from_name: '',
-    //     email: '',
-    //     message:'',
-    // }
+
     const form = useRef();
 
-    // const [mail, setMail] = useState(standardMail);      
-    // const handleChange = e => setMail({ ...mail, [e.target.name]: e.target.value });
-    
+
+
+
     function sendEmail (e) {
         e.preventDefault();
     
-        emailjs.sendForm('email_profile', 'template_rhk9ith', form.current, 'UetXQQtxVgOnjK8_2')
+        toast.promise(emailjs.sendForm('email_profile', 'template_rhk9ith', form.current, 'UetXQQtxVgOnjK8_2'),        {
+            pending: 'Por favor aguarde...',
+            success: 'Obrigado por entrar em contato!',
+            error: 'Ops, ocorreu um erro ao tentar enviar email.', ...toastConfig,
+          })
             .then((result) => {
-                alert('Obrigado por entrar em contato!');
                 console.log(result.text);
             }, (error) => {
-                alert('Ocorreu um erro ao tentar enviar email.');
                 console.log(error.text);
             }).finally(() => {
                 e.target.reset();
@@ -53,6 +64,18 @@ export function Contact() {
     return (
         <Container>
             <Menu/>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
             <Main>
                 <Description title="Minhas redes sociais">
                     <p>
@@ -83,6 +106,7 @@ export function Contact() {
                         <Inputs>
                             <Input
                                 type="text"
+                                labelPlaceholder="Nome"
                                 placeholder="Informe seu nome"
                                 icon={BsFillPersonFill}
                                 name="from_name"
@@ -91,6 +115,7 @@ export function Contact() {
                             />
                             <Input
                                 type="email"
+                                labelPlaceholder="Email"
                                 placeholder="Informe seu email"
                                 icon={MdOutlineEmail}
                                 name="email"
@@ -98,6 +123,7 @@ export function Contact() {
                                 required
                             />
                             <TextArea
+                                labelPlaceholder="Mensagem"
                                 placeholder="Informe sua mensagem"
                                 name="message"
                                 errorMessage="Este campo é obrigatório."
