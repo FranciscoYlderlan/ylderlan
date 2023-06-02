@@ -8,7 +8,7 @@ Este é um projeto de portfólio desenvolvido utilizando React, Vite e Styled-Co
 
 - Exibição automática dos projetos públicos do GitHub
 - Envio de e-mails através do formulário de contato, utilizando EmailJS
-- Animações e transições suaves com Framer Motion
+- Animações e transições suaves com Framer Motion e CSS
 - Ícones personalizados com React Icons
 - Cards de projeto interativos com hover utilizando Radix-UI/React-Hover-Card
 
