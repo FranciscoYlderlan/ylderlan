@@ -32,7 +32,6 @@ export function Card({src, uploaded=false ,project, ...rest }) {
         
             <CardHover project={project}>
                 <View
-
                     uploaded = {uploaded}
                     onMouseEnter={() => setIsShown(true)}
                     onMouseLeave={() => setIsShown(false)}
@@ -62,7 +61,6 @@ export function Card({src, uploaded=false ,project, ...rest }) {
                         }
                     </Tags>
                     {
-                        
                         (windowWidth < 1024 && isShown) &&
                         <AcessLink href={url} target='_blank'>
                             <Button title={'Veja mais'} icon={BsArrowRightShort}/>

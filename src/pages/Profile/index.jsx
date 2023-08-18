@@ -111,6 +111,7 @@ export function Profile() {
                     </Tags>   
 
                     <Viewer filter={option}/>
+                    {/* TODO: Adicionar paginação */}
             
                 </Content>
             </Main>

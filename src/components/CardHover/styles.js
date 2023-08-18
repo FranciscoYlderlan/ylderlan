@@ -37,36 +37,43 @@ export const Container = styled.div`
 `;
 
 export const HoverCardContent = styled.div`
-    height: 50vh;
-    width: 40vw;
+    
+    max-width: 32vw;
     display: grid;
+    align-content: center;
     gap: 0.8rem;
-    grid-template-rows: 1fr 5fr 3fr 1fr;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
     border-radius: 0.6rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
     text-align: center;
     padding: 2rem 1rem;
-`;
 
-export const Tags = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
 `;
 
 export const Description = styled.div`
     display: flex;
     text-align: justify;
     align-items: center;
+    font-size: clamp(1.4rem, 0.6rem + 0.0781vw, 1.6rem);
     padding: 0 2rem;
 `;
 
+export const Tags = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    strong {
+        font-size: clamp(1.2rem, -0.4rem + 0.1563vw, 1.6rem);
+    }
+    gap: 0.8rem;
+`;
+
+
+
 export const AcessLink = styled.a`
     > button {
-        font-size: 1.2rem;
-        padding: 1.5rem;
+        font-size: clamp(1.4rem, 0.6rem + 0.0781vw, 1.6rem);
+        padding: 1rem;
     }
 
     justify-self: center;
