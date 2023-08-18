@@ -18,6 +18,7 @@ export const Tags = styled.div`
     height: fit-content;
     margin: 1.6rem 0;
     align-items: flex-end;
+    
     @media ${({ theme }) => theme.DEVICES.laptop} {
         gap: 2rem;
     }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2.5rem;
+    padding: 0 .5rem 0 1rem;
     gap: 1rem;
 
     border-radius: 0.8rem;
@@ -25,6 +25,30 @@ export const Container = styled.div`
         border-radius: 3.2rem;
         background-clip: padding-box;
     }
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  
+    scrollbar-width: auto;
+    scrollbar-color: #6c6c6c ;
+  
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #6c6c6c;
+    border-radius: 10px;
+    border: 3px solid #6c6c6c;
+  }
+
 
     @media ${({ theme }) => theme.DEVICES.laptop} {
         height: 25rem;
