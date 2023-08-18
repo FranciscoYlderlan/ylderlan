@@ -32,7 +32,8 @@ export function CardHover({children, project, src,...rest }) {
     
     const tagsTitles = tagsTitleGenerator({
         description: project.description,
-        name: project.name
+        name: project.name,
+        topics: project.topics
     });
     
     return (

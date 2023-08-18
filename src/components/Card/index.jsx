@@ -23,7 +23,8 @@ export function Card({src, uploaded=false ,project, ...rest }) {
 
     const tagsTitles = tagsTitleGenerator({
         description: project.description,
-        name: project.name
+        name: project.name,
+        topics: project.topics
     });
     
     return (

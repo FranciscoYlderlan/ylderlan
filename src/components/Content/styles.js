@@ -23,6 +23,8 @@ export const Container = styled(motion.div)`
 
     > h2 {
         grid-area: header;
+        color: ${({theme}) => theme.COLORS.WHITE};
+
     }
 
     border-radius: 6px;
@@ -44,4 +46,8 @@ export const Container = styled(motion.div)`
 
 export const Details = styled.div`
     grid-area: details;
+
+    > p {
+        color: ${({theme}) => theme.COLORS.WHITE};
+    }
 `;

@@ -43,8 +43,10 @@ function sorted(value1, value2, type = 'incre') {
     return 0;
 }
 
-function tagsTitleGenerator({ name, description }) {
+function tagsTitleGenerator({ name, description, topics }) {
   let tags = [];
+  const hasTopics = topics.length > 0
+  if(hasTopics) return topics
   if (!name) {
     name = "no resources";
   }
@@ -64,9 +66,9 @@ function tagsTitleGenerator({ name, description }) {
   const uniqueTags = tags.filter((element, index) => {
     return tags.indexOf(element) === index;
   });
-
-  return uniqueTags;
-    return uniqueTags;
+  const isEmpty = uniqueTags.length === 0
+   
+  return !isEmpty? uniqueTags: ['html', 'css'];
 }
 
 function isUplouded(project) {

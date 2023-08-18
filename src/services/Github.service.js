@@ -2,7 +2,7 @@ import * as utils from '../providers/utils.js';
 
 export class GithubRepos {
     static async searchRepos(sort = '', direction = '') {
-        const endpoint = `https://api.github.com/users/franciscoylderlan/repos?sort=${sort}&direction=${direction}`;
+        const endpoint = `https://api.github.com/users/franciscoylderlan/repos?sort=${sort}&direction=${direction}&per_page=100`;
         const result = await fetch(endpoint, {
             headers: {
                 Authorization: `Bearer ${import.meta.env.VITE_USER_TOKEN}`,
@@ -14,7 +14,7 @@ export class GithubRepos {
         const repos_infos = await result.json();
         let formatted_repos_infos = [];
         Object.values(repos_infos).map(
-            ({ name, description, html_url, created_at, homepage, has_pages }) =>
+            ({ name, description, html_url, created_at, homepage, has_pages, topics }) =>
                 (formatted_repos_infos = [
                     {
                         name,
@@ -23,10 +23,12 @@ export class GithubRepos {
                         created_at,
                         homepage,
                         has_pages,
+                        topics,
                     },
                     ...formatted_repos_infos,
                 ])
         );
+        //TODO:lógica de ordenação está invertida
         return formatted_repos_infos;
     }
 
@@ -65,7 +67,7 @@ export class GithubRepos {
     static getPageURL(repository) {
         const { name, html_url, homepage, has_pages } = repository;
         const existHomePage = homepage && homepage !== '';
-
+        
         if (has_pages || existHomePage) {
             if (existHomePage)
                 return homepage.includes('https://') ? homepage : `https://${homepage}/`;
