@@ -20,6 +20,7 @@ import {
     SiMysql,
     SiPostgresql,
     SiDocker,
+    SiVercel,
 } from 'react-icons/si';
 
 import { LiaFigma } from "react-icons/lia";
@@ -58,7 +59,7 @@ export function Home() {
                         cuja as quais já tive contato e pude desenvolver alguma aplicação.
                     </p>
                     <Tools>
-                    <IconLink size={60} title="Html5" icon={AiFillHtml5}
+                        <IconLink size={60} title="Html5" icon={AiFillHtml5}
                             href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
                         />
                         <IconLink size={50} title="CSS" icon={DiCss3}
@@ -109,7 +110,9 @@ export function Home() {
                         <IconLink size={50} title="Figma" icon={LiaFigma}
                             href="https://www.figma.com/"
                         />
-
+                        <IconLink size={50} title="Vercel" icon={SiVercel}
+                            href="https://vercel.com/"
+                        />
                     </Tools>
                 </Content>
             </Main>
