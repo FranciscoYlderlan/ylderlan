@@ -15,7 +15,7 @@ export const Container = styled.div`
     overflow-y: overlay;
 
     &::-webkit-scrollbar {
-        width: 2.4rem;
+        width: 1.6rem;
         border-radius: 3.2rem;
     }
 

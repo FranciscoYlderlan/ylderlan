@@ -34,7 +34,7 @@ export const Tools = styled.div`
     overflow-x: hidden;
 
     &::-webkit-scrollbar {
-        width: 2.4rem;
+        width: 1.6rem;
         border-radius: 3.2rem;
     }
 

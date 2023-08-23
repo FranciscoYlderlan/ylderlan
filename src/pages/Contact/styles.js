@@ -29,7 +29,7 @@ export const Form = styled.form`
     overflow-y: auto;
 
     &::-webkit-scrollbar {
-        width: 2.4rem;
+        width: 1.6rem;
         border-radius: 3.2rem;
     }
 
