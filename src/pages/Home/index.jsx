@@ -23,7 +23,7 @@ import {
     SiVercel,
 } from 'react-icons/si';
 
-import { LiaFigma } from "react-icons/lia";
+import { LiaFigma, LiaSass } from "react-icons/lia";
 
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiCss3 } from 'react-icons/di';
@@ -88,6 +88,9 @@ export function Home() {
                         />
                         <IconLink size={60} title="Styled-Components" icon={SiStyledcomponents}
                             href="https://styled-components.com/"
+                        />
+                        <IconLink size={50} title="SASS" icon={LiaSass}
+                            href="https://sass-lang.com/"
                         />
                         <IconLink size={50} title="Jest" icon={SiJest}
                             href="https://jestjs.io/pt-BR/"
