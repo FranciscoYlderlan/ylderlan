@@ -21,6 +21,7 @@ import {
     SiPostgresql,
     SiDocker,
     SiVercel,
+    SiNetlify,
 } from 'react-icons/si';
 
 import { LiaFigma, LiaSass } from "react-icons/lia";
@@ -115,6 +116,9 @@ export function Home() {
                         />
                         <IconLink size={50} title="Vercel" icon={SiVercel}
                             href="https://vercel.com/"
+                        />
+                        <IconLink size={50} title="Netlify" icon={SiNetlify}
+                            href="https://www.netlify.com/"
                         />
                     </Tools>
                 </Content>
