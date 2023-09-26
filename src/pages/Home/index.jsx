@@ -22,6 +22,7 @@ import {
     SiDocker,
     SiVercel,
     SiNetlify,
+    SiNextdotjs
 } from 'react-icons/si';
 
 import { LiaFigma, LiaSass } from "react-icons/lia";
@@ -75,6 +76,9 @@ export function Home() {
                         <IconLink size={60} title="React" icon={FaReact}
                             href="https://legacy.reactjs.org/docs/getting-started.html"
                         />
+                        <IconLink size={50} title="Next 13" icon={SiNextdotjs}
+                            href="https://nextjs.org/"
+                        />
                         <IconLink size={60} title="NodeJs" icon={FaNodeJs}
                             href="https://nodejs.org/en/about"
                         />
@@ -120,6 +124,7 @@ export function Home() {
                         <IconLink size={50} title="Netlify" icon={SiNetlify}
                             href="https://www.netlify.com/"
                         />
+                        
                     </Tools>
                 </Content>
             </Main>
